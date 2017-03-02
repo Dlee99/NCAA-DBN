@@ -2,17 +2,14 @@ import java.io.*;
 import java.util.*;
 
 public class Main {
-    public static double p(double t1, double t2){
-        double std1 = Math.sqrt(t1*(1-t1)), std2 = Math.sqrt(t2*1-t2);
-        double z = (t1-t2) / (Math.sqrt(std1) + Math.sqrt(Math.exp(std2)));
-        return CDF_Normal.normp(z);
-    }
+
 
     public static void main(String[] args) throws IOException {
         // write your code here
         Scanner txt = new Scanner(new File("RegularSeasonCompactResults.txt"));
         ArrayList<String> tm = new ArrayList();
         ArrayList<Double> wl = new ArrayList();
+        ArrayList<Double> SOS = new ArrayList();
         ArrayList<String> RO32TM = new ArrayList<>();
         ArrayList<Double> RO32NUM = new ArrayList<>();
         ArrayList<String> RO16TM = new ArrayList<>();
@@ -41,6 +38,7 @@ public class Main {
 
             tm.add(s[0]);
             wl.add(Double.parseDouble(s[1]));
+            SOS.add(Double.parseDouble(s[2]));
 
 
 
@@ -51,14 +49,16 @@ public class Main {
         //   }
         // }
         for(int i = 0; i < tm.size(); i = i + 2) {
-            System.out.println(tm.get(i) + "\t" + tm.get(i + 1) + ":\t" + p(wl.get(i), wl.get(i + 1)));
-            if(p(wl.get(i), wl.get(i + 1)) > .5){
+
+            double Corrected1 = wl.get(i) * SOS.get(i), Corrected2 = wl.get(i) * SOS.get(i + 1);
+            System.out.println(tm.get(i) + "\t" + Corrected1 + ":\t" + Corrected2);
+            if(ZTable.p(Corrected1, Corrected2) > .5){
                 System.out.println(tm.get(i) +"\tWins!");
                 RO32TM.add(tm.get(i));
                 RO32NUM.add(wl.get(i));
 
             }
-            else if(p(wl.get(i), wl.get(i + 1)) == .5){
+            else if(ZTable.p(Corrected1, Corrected2) == .5){
                 System.out.println("'Tis a tie!");
             }
             else{
