@@ -6,7 +6,6 @@ public class ZTable {
     public static double p(double t1, double t2) throws FileNotFoundException {
         double std1 = Math.sqrt(t1*(1-t1)), std2 = Math.sqrt(t2*1-t2);
         double z = (t2-t1) / (Math.sqrt(std1) + Math.sqrt(Math.exp(std2)));
-        System.out.println(z);
         return ztable(z);
     }
     public static double ztable(double z) throws FileNotFoundException {
