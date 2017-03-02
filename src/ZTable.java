@@ -9,11 +9,19 @@ public class ZTable {
         return ztable(z);
     }
     public static double ztable(double z) throws FileNotFoundException {
-        double p = .5;
+        double p;
         Scanner txt = new Scanner(new File("Z-Table.txt"));
-        int format = (int) (z * 100);
-        z = (double) format / 100;
-        for(int i = 0; )
+        int format = (int) (Math.abs(z) * 100);
+        for(int i = 0; i <= format / 10; i++){
+            txt.nextLine();
+        }
+        String[] zline = txt.nextLine().split(",");
+        if(z >= 0) {
+            p = 1 - Double.parseDouble(zline[(format - ((format / 10)) * 10) + 1]);
+        }
+        else{
+            p = Double.parseDouble(zline[(format - ((format / 10)) * 10) + 1]);
+        }
         return p;
     }
 }
