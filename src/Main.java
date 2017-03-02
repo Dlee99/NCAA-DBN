@@ -50,7 +50,7 @@ public class Main {
         // }
         for(int i = 0; i < tm.size(); i = i + 2) {
 
-            double Corrected1 = wl.get(i) * SOS.get(i), Corrected2 = wl.get(i) * SOS.get(i + 1);
+            double Corrected1 = wl.get(i) * SOS.get(i), Corrected2 = wl.get(i + 1) * SOS.get(i + 1);
             System.out.println(tm.get(i) + "\t" + Corrected1 + ":\t" + Corrected2);
             if(ZTable.p(Corrected1, Corrected2) > .5){
                 System.out.println(tm.get(i) +"\tWins!");
