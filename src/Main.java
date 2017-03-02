@@ -37,14 +37,11 @@ public class Main {
         for(int i = 0; i < tm.size(); i = i + 2) {
             double Corrected1 = wl.get(i) * SOS.get(i), Corrected2 = wl.get(i + 1) * SOS.get(i + 1);
             System.out.println(tm.get(i) + "\t" + tm.get(i + 1) + ":\t" + ZTable.p(Corrected1, Corrected2));
-            if(ZTable.p(Corrected1, Corrected2) > .5){
+            if(ZTable.p(Corrected1, Corrected2) >= .5){
                 System.out.println(tm.get(i) +"\tWins!");
                 RO32TM.add(tm.get(i));
                 RO32NUM.add(wl.get(i));
 
-            }
-            else if(ZTable.p(Corrected1, Corrected2) == .5){
-                System.out.println("'Tis a tie!");
             }
             else{
                 System.out.println(tm.get(i + 1) + "\tWins!");
@@ -64,14 +61,11 @@ public class Main {
         for(int i = 0; i < RO32TM.size(); i = i + 2) {
             double Corrected1 = wl.get(i) * SOS.get(i), Corrected2 = wl.get(i + 1) * SOS.get(i + 1);
             System.out.println(RO32TM.get(i) + "\t" + RO32TM.get(i + 1) + ":\t" + ZTable.p(RO32NUM.get(i), RO32NUM.get(i + 1)));
-            if(ZTable.p(Corrected1, Corrected2) > .5){
+            if(ZTable.p(Corrected1, Corrected2) >= .5){
                 System.out.println(RO32TM.get(i) +"\tWins!");
                 RO16TM.add(RO32TM.get(i));
                 RO16NUM.add(RO32NUM.get(i));
 
-            }
-            else if(ZTable.p(Corrected1, Corrected2) == .5){
-                System.out.println("'Tis a tie!");
             }
             else{
                 System.out.println(RO32TM.get(i + 1) + "\tWins!");
@@ -91,14 +85,11 @@ public class Main {
         for(int i = 0; i < RO16TM.size(); i = i + 2) {
             double Corrected1 = wl.get(i) * SOS.get(i), Corrected2 = wl.get(i + 1) * SOS.get(i + 1);
             System.out.println(RO16TM.get(i) + "\t" + RO16TM.get(i + 1) + ":\t" + ZTable.p(RO16NUM.get(i), RO16NUM.get(i + 1)));
-            if(ZTable.p(Corrected1, Corrected2) > .5){
+            if(ZTable.p(Corrected1, Corrected2) >= .5){
                 System.out.println(RO16TM.get(i) +"\tWins!");
                 RO8TM.add(RO16TM.get(i));
                 RO8NUM.add(RO16NUM.get(i));
 
-            }
-            else if(ZTable.p(Corrected1, Corrected2) == .5){
-                System.out.println("'Tis a tie!");
             }
             else{
                 System.out.println(RO16TM.get(i + 1) + "\tWins!");
@@ -119,14 +110,11 @@ public class Main {
             double Corrected1 = wl.get(i) * SOS.get(i), Corrected2 = wl.get(i + 1) * SOS.get(i + 1);
 
             System.out.println(RO8TM.get(i) + "\t" + RO8TM.get(i + 1) + ":\t" + ZTable.p(RO8NUM.get(i), RO8NUM.get(i + 1)));
-            if(ZTable.p(Corrected1, Corrected2) > .5){
+            if(ZTable.p(Corrected1, Corrected2) >= .5){
                 System.out.println(RO8TM.get(i) +"\tWins!");
                 RO4TM.add(RO8TM.get(i));
                 RO4NUM.add(RO8NUM.get(i));
 
-            }
-            else if(ZTable.p(Corrected1, Corrected2) == .5){
-                System.out.println("'Tis a tie!");
             }
             else{
                 System.out.println(RO8TM.get(i + 1) + "\tWins!");
@@ -147,14 +135,11 @@ public class Main {
         for(int i = 0; i < RO4TM.size(); i = i + 2) {
             double Corrected1 = wl.get(i) * SOS.get(i), Corrected2 = wl.get(i + 1) * SOS.get(i + 1);
             System.out.println(RO4TM.get(i) + "\t" + RO4TM.get(i + 1) + ":\t" + ZTable.p(RO4NUM.get(i), RO4NUM.get(i + 1)));
-            if(ZTable.p(Corrected1, Corrected2) > .5){
+            if(ZTable.p(Corrected1, Corrected2) >= .5){
                 System.out.println(RO4TM.get(i) +"\tWins!");
                 FinalTM.add(RO4TM.get(i));
                 FinalNum.add(RO4NUM.get(i));
 
-            }
-            else if(ZTable.p(Corrected1, Corrected2) == .5){
-                System.out.println("'Tis a tie!");
             }
             else{
                 System.out.println(RO4TM.get(i + 1) + "\tWins!");
@@ -173,7 +158,7 @@ public class Main {
         for(int i = 0; i < FinalTM.size(); i = i + 2) {
             double Corrected1 = wl.get(i) * SOS.get(i), Corrected2 = wl.get(i + 1) * SOS.get(i + 1);
             System.out.println(FinalTM.get(i) + "\t" + FinalTM.get(i + 1) + ":\t" + ZTable.p(FinalNum.get(i), FinalNum.get(i + 1)));
-            if(ZTable.p(Corrected1, Corrected2) > .5){
+            if(ZTable.p(Corrected1, Corrected2) >= .5){
                 System.out.println(FinalTM.get(i) +"\tWins!");
                 break;
 
