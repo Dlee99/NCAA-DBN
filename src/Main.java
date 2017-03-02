@@ -6,7 +6,6 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
         // write your code here
-        Scanner txt = new Scanner(new File("RegularSeasonCompactResults.txt"));
         ArrayList<String> tm = new ArrayList<>();
         ArrayList<Double> wl = new ArrayList<>();
         ArrayList<Double> SOS = new ArrayList<>();

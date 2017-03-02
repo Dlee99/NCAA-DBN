@@ -40,7 +40,7 @@ Kentucky, .7647, 0.577
 Stony Brook, .8125, 0.487
 Notre Dame, .6562, 0.584
 Michigan, .6470, 0.559
-West Virginia, 0.584,
+West Virginia, .7647, 0.584
 Stephen F Austin, .8437, 0.478
 Wisconsin, .625, 0.585
 Pittsburg, .6562, 0.572
