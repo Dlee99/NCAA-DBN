@@ -21,8 +21,6 @@ public class Main {
         ArrayList<Double> RO8NUM = new ArrayList<>();
         ArrayList<String> RO4TM = new ArrayList<>();
         ArrayList<Double> RO4NUM = new ArrayList<>();
-        ArrayList<String> RO2TM = new ArrayList<>();
-        ArrayList<Double> RO2NUM = new ArrayList<>();
         ArrayList<String> FinalTM = new ArrayList<>();
         ArrayList<Double> FinalNum = new ArrayList<>();
 
