@@ -39,26 +39,25 @@ public class Main {
         while(test.hasNextLine()){
             String s[] = test.nextLine().split(",");
 
-
             tm.add(s[0]);
             wl.add(Double.parseDouble(s[1]));
 
 
 
         }
-      //  for(int i = 0; i < tm.size(); i++){
+        //  for(int i = 0; i < tm.size(); i++){
         //    for(int u = i + 1; u < tm.size(); u++){
-         //       System.out.println(tm.get(i) + "\t" + tm.get(u) + ":\t" + p(wl.get(i), wl.get(u)));
-         //   }
-       // }
-         for(int i = 0; i < tm.size(); i = i + 2) {
+        //       System.out.println(tm.get(i) + "\t" + tm.get(u) + ":\t" + p(wl.get(i), wl.get(u)));
+        //   }
+        // }
+        for(int i = 0; i < tm.size(); i = i + 2) {
             System.out.println(tm.get(i) + "\t" + tm.get(i + 1) + ":\t" + p(wl.get(i), wl.get(i + 1)));
             if(p(wl.get(i), wl.get(i + 1)) > .5){
-                   System.out.println(tm.get(i) +"\tWins!");
+                System.out.println(tm.get(i) +"\tWins!");
                 RO32TM.add(tm.get(i));
                 RO32NUM.add(wl.get(i));
 
-               }
+            }
             else if(p(wl.get(i), wl.get(i + 1)) == .5){
                 System.out.println("'Tis a tie!");
             }
@@ -193,14 +192,20 @@ public class Main {
 //
 
             }
-           // else if(p(FinalNum.get(i), FinalNum.get(i + 1)) == .5){
-             //   System.out.println("'Tis a tie!");
-               // break;
-            }
-
-
+            // else if(p(FinalNum.get(i), FinalNum.get(i + 1)) == .5){
+            //   System.out.println("'Tis a tie!");
+            // break;
         }
 
 
     }
+    public static double ztable(double z) throws FileNotFoundException {
+        double p = .5;
+        Scanner txt = new Scanner(new File("Z-Table.txt"));
+        int format = (int) (z * 100);
+        z = (double) format / 100;
 
+        return p;
+    }
+
+}

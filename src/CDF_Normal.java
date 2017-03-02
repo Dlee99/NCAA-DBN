@@ -48,10 +48,11 @@ C
         final double cutoff = 7.071;
 	    //z score at which a different function must be used
         final double root2pi = 2.506628274631001;
-	    //the square root of pi, duh
+	    //the square root of 2 * Math.PI;
         zabs = Math.abs(z);
 
 //  |z| > 37
+
 	    //Z scores too big or small just round
         if (z > 37.0) {
 
@@ -105,6 +106,7 @@ C
         }
 
     }
+
 
 }
 
