@@ -5,6 +5,7 @@ import java.util.*;
 
 public class Main {
 
+
     public static ArrayList<String> tm = new ArrayList<>();
     public static ArrayList<Double> wl = new ArrayList<>();
     public static ArrayList<Double> SOS = new ArrayList<>();
@@ -25,6 +26,7 @@ public class Main {
     public static ArrayList<Double> FinalSOS = new ArrayList<>();
     public static void main(String[] args) throws IOException {
         bracketFrame.cFrame();
+
 
         Scanner test = new Scanner(new File("teams.txt"));
         System.out.println("ROUND OF 64");
