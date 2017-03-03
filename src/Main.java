@@ -31,8 +31,6 @@ public class Main {
             wl.add(Double.parseDouble(s[1]));
             SOS.add(Double.parseDouble(s[2]));
 
-
-
         }
         for(int i = 0; i < tm.size(); i = i + 2) {
             double Corrected1 = wl.get(i) * SOS.get(i), Corrected2 = wl.get(i + 1) * SOS.get(i + 1);
@@ -44,23 +42,25 @@ public class Main {
 
             }
             else{
+
                 System.out.println(tm.get(i + 1) + "\tWins!");
                 RO32TM.add(tm.get(i+1));
                 RO32NUM.add(wl.get(i+1));
 
 
             }
+
             System.out.println();
 
         }
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
+
+        System.out.println("\n\n\n");
+
         System.out.println("ROUND OF 32");
         for(int i = 0; i < RO32TM.size(); i = i + 2) {
             double Corrected1 = wl.get(i) * SOS.get(i), Corrected2 = wl.get(i + 1) * SOS.get(i + 1);
             System.out.println(RO32TM.get(i) + "\t" + RO32TM.get(i + 1) + ":\t" + ZTable.p(RO32NUM.get(i), RO32NUM.get(i + 1)));
+
             if(ZTable.p(Corrected1, Corrected2) >= .5){
                 System.out.println(RO32TM.get(i) +"\tWins!");
                 RO16TM.add(RO32TM.get(i));
@@ -71,16 +71,14 @@ public class Main {
                 System.out.println(RO32TM.get(i + 1) + "\tWins!");
                 RO16TM.add(RO32TM.get(i+1));
                 RO16NUM.add(RO32NUM.get(i+1));
-//
 
             }
+
             System.out.println();
 
         }
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
+        System.out.println("\n\n\n");
+
         System.out.println("ROUND OF 16 (Sweet 16)");
         for(int i = 0; i < RO16TM.size(); i = i + 2) {
             double Corrected1 = wl.get(i) * SOS.get(i), Corrected2 = wl.get(i + 1) * SOS.get(i + 1);
@@ -95,16 +93,15 @@ public class Main {
                 System.out.println(RO16TM.get(i + 1) + "\tWins!");
                 RO8TM.add(RO16TM.get(i+1));
                 RO8NUM.add(RO16NUM.get(i+1));
-//
+
 
             }
             System.out.println();
 
         }
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
+
+        System.out.println("\n\n\n");
+
         System.out.println("ROUND OF 8 (Elite 8)");
         for(int i = 0; i < RO8TM.size(); i = i + 2) {
             double Corrected1 = wl.get(i) * SOS.get(i), Corrected2 = wl.get(i + 1) * SOS.get(i + 1);
@@ -118,19 +115,17 @@ public class Main {
             }
             else{
                 System.out.println(RO8TM.get(i + 1) + "\tWins!");
-                RO4TM.add(RO8TM.get(i));
-                RO4NUM.add(RO8NUM.get(i));
-//
+                RO4TM.add(RO8TM.get(i + 1));
+                RO4NUM.add(RO8NUM.get(i + 1));
+
 
             }
             System.out.println();
 
         }
 
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
+        System.out.println("\n\n\n");
+
         System.out.println("ROUND OF 4 (Final 4)");
         for(int i = 0; i < RO4TM.size(); i = i + 2) {
             double Corrected1 = wl.get(i) * SOS.get(i), Corrected2 = wl.get(i + 1) * SOS.get(i + 1);
@@ -143,9 +138,9 @@ public class Main {
             }
             else{
                 System.out.println(RO4TM.get(i + 1) + "\tWins!");
-                FinalTM.add(RO4TM.get(i));
-                FinalNum.add(RO4NUM.get(i));
-//
+                FinalTM.add(RO4TM.get(i + 1));
+                FinalNum.add(RO4NUM.get(i + 1));
+
 
             }
             System.out.println();
@@ -165,7 +160,7 @@ public class Main {
             } else{
                 System.out.println(FinalTM.get(i + 1) + "\tWins!");
                 break;
-//
+
 
             }
 
