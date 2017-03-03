@@ -5,27 +5,26 @@ import java.util.*;
 
 public class Main {
 
-
+    public static ArrayList<String> tm = new ArrayList<>();
+    public static ArrayList<Double> wl = new ArrayList<>();
+    public static ArrayList<Double> SOS = new ArrayList<>();
+    public static ArrayList<String> RO32TM = new ArrayList<>();
+    public static ArrayList<Double> RO32NUM = new ArrayList<>();
+    public static ArrayList<Double> RO32SOS = new ArrayList<>();
+    public static ArrayList<String> RO16TM = new ArrayList<>();
+    public static ArrayList<Double> RO16NUM = new ArrayList<>();
+    public static ArrayList<Double> RO16SOS = new ArrayList<>();
+    public static ArrayList<String> RO8TM = new ArrayList<>();
+    public static ArrayList<Double> RO8NUM = new ArrayList<>();
+    public static ArrayList<Double> RO8SOS = new ArrayList<>();
+    public static ArrayList<String> RO4TM = new ArrayList<>();
+    public static ArrayList<Double> RO4NUM = new ArrayList<>();
+    public static ArrayList<Double> RO4SOS = new ArrayList<>();
+    public static ArrayList<String> FinalTM = new ArrayList<>();
+    public static ArrayList<Double> FinalNUM = new ArrayList<>();
+    public static ArrayList<Double> FinalSOS = new ArrayList<>();
     public static void main(String[] args) throws IOException {
         bracketFrame.cFrame();
-        ArrayList<String> tm = new ArrayList<>();
-        ArrayList<Double> wl = new ArrayList<>();
-        ArrayList<Double> SOS = new ArrayList<>();
-        ArrayList<String> RO32TM = new ArrayList<>();
-        ArrayList<Double> RO32NUM = new ArrayList<>();
-        ArrayList<Double> RO32SOS = new ArrayList<>();
-        ArrayList<String> RO16TM = new ArrayList<>();
-        ArrayList<Double> RO16NUM = new ArrayList<>();
-        ArrayList<Double> RO16SOS = new ArrayList<>();
-        ArrayList<String> RO8TM = new ArrayList<>();
-        ArrayList<Double> RO8NUM = new ArrayList<>();
-        ArrayList<Double> RO8SOS = new ArrayList<>();
-        ArrayList<String> RO4TM = new ArrayList<>();
-        ArrayList<Double> RO4NUM = new ArrayList<>();
-        ArrayList<Double> RO4SOS = new ArrayList<>();
-        ArrayList<String> FinalTM = new ArrayList<>();
-        ArrayList<Double> FinalNUM = new ArrayList<>();
-        ArrayList<Double> FinalSOS = new ArrayList<>();
 
         Scanner test = new Scanner(new File("teams.txt"));
         System.out.println("ROUND OF 64");
