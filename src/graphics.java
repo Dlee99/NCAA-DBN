@@ -10,16 +10,27 @@ public class graphics extends JPanel {
         super.paintComponent(g);
         this.setBackground(Color.WHITE);
         g.setColor(Color.black);
-        int lbv = 70;
-        int space = 23;
-        for(int x1 = 10, x2 = 70, y1 = 10, y2 = 10, i = 0; i < 16; i++){
+        Dimension screen = Toolkit.getDefaultToolkit().getScreenSize();
+        int space = (screen.height - (30 * 16)) / 16;
+        int y1 = 10, y2 = 10;
+        for (int i = 0, x1 = 10, x2 = x1 + 60; i < 16; i++) {
             g.drawLine(x1, y1, x2, y2);
             y1 += 30;
-            g.drawLine(lbv, y1, x2, y2);
+            g.drawLine(x2, y1, x2, y2);
             y2 += 30;
             g.drawLine(x1, y1, x2, y2);
-            y1 += space; y2 += space;
+            y1 += space;
+            y2 += space;
         }
-
+        y1 = 10; y2 = 10;
+        for (int i = 0, x1 = screen.width - 10, x2 = x1 - 60; i < 16; i++) {
+            g.drawLine(x1, y1, x2, y2);
+            y1 += 30;
+            g.drawLine(x2, y1, x2, y2);
+            y2 += 30;
+            g.drawLine(x1, y1, x2, y2);
+            y1 += space;
+            y2 += space;
+        }
     }
 }
