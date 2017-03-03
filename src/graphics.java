@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class graphics extends JPanel {
+
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
         this.setBackground(Color.WHITE);
@@ -60,7 +61,20 @@ public class graphics extends JPanel {
         //Left side Round 32 Bracket Lines
 
         y1 = 25; y2 = 25;
-        for (int i = 0, x1 = 70, x2 = x1 + width; i < 8; i++) {
+        for (int i = 0, x1 = 10 + width, x2 = x1 + width; i < 8; i++) {
+            g.drawLine(x1, y1, x2, y2);
+            y1 += 30 + space;
+            g.drawLine(x2, y1, x2, y2);
+            y2 += 30 + space;
+            g.drawLine(x1, y1, x2, y2);
+            y1 += 30 + space;
+            y2 += 30 + space;
+        }
+
+        //Right side Round 32 Bracket Lines
+
+        y1 = 25; y2 = 25;
+        for (int i = 0, x1 = screen.width - width - 10, x2 = x1 - width; i < 8; i++) {
             g.drawLine(x1, y1, x2, y2);
             y1 += 30 + space;
             g.drawLine(x2, y1, x2, y2);
