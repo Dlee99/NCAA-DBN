@@ -12,6 +12,9 @@ public class graphics extends JPanel {
         Dimension screen = Toolkit.getDefaultToolkit().getScreenSize();
         int space = (screen.height - (30 * 16)) / 20;
         int width = 60; //implement standardization for window size
+
+        //Left side Round 64 Bracket Lines
+
         int y1 = 10, y2 = 10;
         for (int i = 0, x1 = 10, x2 = x1 + width; i < 16; i++) {
             g.drawLine(x1, y1, x2, y2);
@@ -22,6 +25,9 @@ public class graphics extends JPanel {
             y1 += space;
             y2 += space;
         }
+
+        //Right side Round 64 Bracket Lines
+
         y1 = 10; y2 = 10;
         for (int i = 0, x1 = screen.width - 10, x2 = x1 - width; i < 16; i++) {
             g.drawLine(x1, y1, x2, y2);
@@ -32,28 +38,27 @@ public class graphics extends JPanel {
             y1 += space;
             y2 += space;
         }
+
+        //Left side Round 64 Team Names
+
         for(int i = 0, x64L = 10, y64L = 10; i < 32; i += 2) {
             g.drawString(Main.tm.get(i), x64L, y64L);
             y64L += 30;
             g.drawString(Main.tm.get(i + 1), x64L, y64L);
             y64L += space;
         }
-        /*
-        for(int x1=70, x2=160,yy1=25,yy2=25,i=0; i<16; i++) {
-            g.drawLine(x1, yy1, x2, yy2);
-            yy1 += 60;
-            yy2 += 60;
 
+        //Right side Round 64 Team Names
+
+        for(int i=32, x64R = screen.width - width - 10, y64R = 10; i<64; i+=2){
+            g.drawString(Main.tm.get(i), x64R,y64R);
+            y64R+=30;
+            g.drawString(Main.tm.get(i + 1), x64R, y64R);
+            y64R += space;
         }
-        for(int x1=160, yyy1=25, x2=160, yyy2=85, i=0; i<8;i++ ){
-            g.drawLine(x1, yyy1  , x2, yyy2);
-            yyy1+=120;
-            yyy2+=120;
 
+        //Left side Round 32 Bracket Lines
 
-
-        }
-        */
         y1 = 25; y2 = 25;
         for (int i = 0, x1 = 70, x2 = x1 + width; i < 8; i++) {
             g.drawLine(x1, y1, x2, y2);
@@ -64,17 +69,14 @@ public class graphics extends JPanel {
             y1 += 30 + space;
             y2 += 30 + space;
         }
-         for(int i=32, x64R = screen.width-70, y64R =10; i<64; i+=2){
-            g.drawString(Main.tm.get(i), x64R,y64R);
-            y64R+=30;
-            g.drawString(Main.tm.get(i + 1), x64R, y64R);
-            y64R += space;
-        }
-         for(int i = 0, x32L = 80, y32L = 25; i < 16; i += 2){
+
+        //Left side Round 32 Team Names
+
+         for(int i = 0, x32L = 11 + width, y32L = 25; i < 16; i += 2){
             g.drawString(Main.RO32TM.get(i), x32L, y32L);
-            y32L += 60;
+            y32L += 30 + space;
             g.drawString(Main.RO32TM.get(i + 1), x32L, y32L);
-            y32L += space+30;
+            y32L += 30 + space;
 
 
         }
