@@ -94,5 +94,23 @@ public class graphics extends JPanel {
 
 
         }
+
+        //Right side Round 32 Team Names
+
+        for(int i = 0, x32L = screen.width - (width * 2) - 10, y32L = 25; i < 32; i += 2){
+            g.drawString(Main.RO32TM.get(i), x32L, y32L);
+            y32L += 30 + space;
+            g.drawString(Main.RO32TM.get(i + 1), x32L, y32L);
+            y32L += 30 + space;
+
+
+        }
     }
 }
+/*        for(int i=32, x64R = screen.width - width - 10, y64R = 10; i<64; i+=2){
+            g.drawString(Main.tm.get(i), x64R,y64R);
+            y64R+=30;
+            g.drawString(Main.tm.get(i + 1), x64R, y64R);
+            y64R += space;
+        }
+        */
