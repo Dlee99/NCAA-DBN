@@ -97,11 +97,11 @@ public class graphics extends JPanel {
 
         //Right side Round 32 Team Names
 
-        for(int i = 16, x32L = screen.width - (width * 2) - 10, y32L = 25; i < 31; i += 2){
-            g.drawString(Main.RO32TM.get(i), x32L, y32L);
-            y32L += 30 + space;
-            g.drawString(Main.RO32TM.get(i + 1), x32L, y32L);
-            y32L += 30 + space;
+        for(int i = 16, x32R = screen.width - (width * 2) - 10, y32R = 25; i < 31; i += 2){
+            g.drawString(Main.RO32TM.get(i), x32R, y32R);
+            y32R += 30 + space;
+            g.drawString(Main.RO32TM.get(i + 1), x32R, y32R);
+            y32R += 30 + space;
 
 
         }
@@ -134,33 +134,36 @@ public class graphics extends JPanel {
 
         //Left side 16 Team Names
 
-        for(int i = 0, x32L = 11 + width * 2, y32L = 50; i < 16; i += 2){
-            g.drawString(Main.RO32TM.get(i), x32L, y32L);
-            y32L += 60 + 2 * space;
-            g.drawString(Main.RO32TM.get(i + 1), x32L, y32L);
-            y32L += 60 + 2 * space;
+        for(int i = 0, x16L = 11 + width * 2, y16L = 50; i < 16; i += 2){
+            g.drawString(Main.RO16TM.get(i), x16L, y16L);
+            y16L += 60 + 2 * space;
+            g.drawString(Main.RO16TM.get(i + 1), x16L, y16L);
+            y16L += 60 + 2 * space;
         }
 
         //Right side 16 Team Names
 
-        for(int i = 16, x32L = screen.width - (width * 3) - 10, y32L = 50; i < 32; i += 2){
-            g.drawString(Main.RO32TM.get(i), x32L, y32L);
-            y32L += 60 + 2 * space;
-            g.drawString(Main.RO32TM.get(i + 1), x32L, y32L);
-            y32L += 60 + 2 * space;
+        for(int i = 16, x16L = screen.width - (width * 3) - 10, y16L = 50; i < 16; i += 2){
+            g.drawString(Main.RO16TM.get(i), x16L, y16L);
+            y16L += 60 + 2 * space;
+            g.drawString(Main.RO16TM.get(i + 1), x16L, y16L);
+            y16L += 60 + 2 * space;
 
 
         }
 
+        //Left side Round 8 Bracket Lines
+
+        y1 = 95; y2 = 95;
+        for (int i = 0, x1 =10+3*width, x2 = x1 + width ; i < 2; i++) {
+            g.drawLine(x1, y1, x2, y2);
+            y1 += 120 + 4 * space;
+            g.drawLine(x2, y1, x2, y2);
+            y2 += 120 + 4 * space;
+            g.drawLine(x1, y1, x2, y2);
+            y1 += 120 + 4 * space;
+            y2 += 120 + 4 * space;
+        }
+
     }
 }
-/*               y1 = 25; y2 = 25;
-        for (int i = 0, x1 = screen.width - width - 10, x2 = x1 - width; i < 8; i++) {
-            g.drawLine(x1, y1, x2, y2);
-            y1 += 30 + space;
-            g.drawLine(x2, y1, x2, y2);
-            y2 += 30 + space;
-            g.drawLine(x1, y1, x2, y2);
-            y1 += 30 + space;
-            y2 += 30 + space;
-        }*/
