@@ -12,7 +12,7 @@ public class ZTable {
         if(z > 3){
             return 1;
         }
-        else if(z < -
+        else if(z < - 3){
             return 0;
         }
         double p;
@@ -21,8 +21,8 @@ public class ZTable {
         for(int i = 0; i < format / 100; i++){
             txt.nextLine();
         }
-       intindex  = format - (format / 100 * 100);
-       index++;
+        int index  = format - (format / 100 * 100);
+        index++;
         
         String[] zline = txt.nextLine().split(",");
         if(z >= 0) {
