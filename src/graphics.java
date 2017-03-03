@@ -11,7 +11,7 @@ public class graphics extends JPanel {
         this.setBackground(Color.WHITE);
         g.setColor(Color.black);
         Dimension screen = Toolkit.getDefaultToolkit().getScreenSize();
-        int space = (screen.height - (30 * 16)) / 16;
+        int space = (screen.height - (30 * 16)) / 20;
         int y1 = 10, y2 = 10;
         for (int i = 0, x1 = 10, x2 = x1 + 60; i < 16; i++) {
             g.drawLine(x1, y1, x2, y2);
