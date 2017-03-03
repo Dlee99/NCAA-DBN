@@ -14,7 +14,7 @@ Iowa, .6774, 0.571
 Temple, .6562, 0.544
 Villanova, .8529, 0.601
 UNC Asheville, .6667, 0.481
-Oregon,.8235, 0.597
+Oregon, .8235, 0.597
 Holy Cross, .4242, 0.461
 SaintJoe's, .7941, 0.561
 Cincinnati, .6875, 0.547

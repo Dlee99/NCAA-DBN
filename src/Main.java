@@ -5,7 +5,6 @@ public class Main {
 
 
     public static void main(String[] args) throws IOException {
-        // write your code here
         ArrayList<String> tm = new ArrayList<>();
         ArrayList<Double> wl = new ArrayList<>();
         ArrayList<Double> SOS = new ArrayList<>();
@@ -59,7 +58,7 @@ public class Main {
         System.out.println("ROUND OF 32");
         for(int i = 0; i < RO32TM.size(); i = i + 2) {
             double Corrected1 = wl.get(i) * SOS.get(i), Corrected2 = wl.get(i + 1) * SOS.get(i + 1);
-            System.out.println(RO32TM.get(i) + "\t" + RO32TM.get(i + 1) + ":\t" + ZTable.p(RO32NUM.get(i), RO32NUM.get(i + 1)));
+            System.out.println(RO32TM.get(i) + "\t" + RO32TM.get(i + 1) + ":\t" + ZTable.p(Corrected1, Corrected2));
 
             if(ZTable.p(Corrected1, Corrected2) >= .5){
                 System.out.println(RO32TM.get(i) +"\tWins!");
@@ -73,7 +72,6 @@ public class Main {
                 RO16NUM.add(RO32NUM.get(i+1));
 
             }
-
             System.out.println();
 
         }
@@ -82,7 +80,7 @@ public class Main {
         System.out.println("ROUND OF 16 (Sweet 16)");
         for(int i = 0; i < RO16TM.size(); i = i + 2) {
             double Corrected1 = wl.get(i) * SOS.get(i), Corrected2 = wl.get(i + 1) * SOS.get(i + 1);
-            System.out.println(RO16TM.get(i) + "\t" + RO16TM.get(i + 1) + ":\t" + ZTable.p(RO16NUM.get(i), RO16NUM.get(i + 1)));
+            System.out.println(RO16TM.get(i) + "\t" + RO16TM.get(i + 1) + ":\t" + ZTable.p(Corrected1, Corrected2));
             if(ZTable.p(Corrected1, Corrected2) >= .5){
                 System.out.println(RO16TM.get(i) +"\tWins!");
                 RO8TM.add(RO16TM.get(i));

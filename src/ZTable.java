@@ -9,18 +9,24 @@ public class ZTable {
         return ztable(z);
     }
     public static double ztable(double z) throws FileNotFoundException {
+        if(z > 3){
+            return 1;
+        }
+        else if(z < -3){
+            return 0;
+        }
         double p;
         Scanner txt = new Scanner(new File("Z-Table.txt"));
-        int format = (int) (Math.abs(z) * 100);
-        for(int i = 0; i <= format / 10; i++){
+        int format = (int) (Math.abs(z) * 1000);
+        for(int i = 0; i < format / 100; i++){
             txt.nextLine();
         }
         String[] zline = txt.nextLine().split(",");
         if(z >= 0) {
-            p = 1 - Double.parseDouble(zline[(format - ((format / 10)) * 10) + 1]);
+            p = 1 - Double.parseDouble(zline[((format - ((format / 100)) * 100)) + ((format - ((format / 10)) * 10)) + 1]);
         }
         else{
-            p = Double.parseDouble(zline[(format - ((format / 10)) * 10) + 1]);
+            p = Double.parseDouble(zline[((format - ((format / 100)) * 100)) + ((format - ((format / 10)) * 10)) + 1]);
         }
         return p;
     }
