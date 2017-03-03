@@ -21,9 +21,8 @@ public class ZTable {
         for(int i = 0; i < format / 100; i++){
             txt.nextLine();
         }
-       intindex  = format - (format / 1000 * 1000);
-        index = index - (index / 100 * 100);
-                index++;
+       intindex  = format - (format / 100 * 100);
+       index++;
         
         String[] zline = txt.nextLine().split(",");
         if(z >= 0) {
