@@ -37,5 +37,17 @@ public class graphics extends JPanel {
             g.drawString(Main.tm.get(i + 1), x64L, y64L);
             y64L += space;
         }
-    }
-}
+        for(int x1=70, x2=160,yy1=25,yy2=25,i=0; i<16; i++) {
+            g.drawLine(x1, yy1, x2, yy2);
+            yy1 += 60;
+            yy2 += 60;
+
+        }
+        for(int x1=160, yyy1=25, x2=160, yyy2=85, i=0; i<8;i++ ){
+            g.drawLine(x1, yyy1  , x2, yyy2);
+            yyy1+=120;
+            yyy2+=120;
+
+
+
+        }}}
