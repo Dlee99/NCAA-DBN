@@ -108,7 +108,7 @@ public class graphics extends JPanel {
 
         //Right side Round 32 Team Names
 
-        for(int i = 0, x32L = screen.width - (width * 2) - 10, y32L = 25; i < 32; i += 2){
+        for(int i = 16, x32L = screen.width - (width * 2) - 10, y32L = 25; i < 31; i += 2){
             g.drawString(Main.RO32TM.get(i), x32L, y32L);
             y32L += 30 + space;
             g.drawString(Main.RO32TM.get(i + 1), x32L, y32L);
