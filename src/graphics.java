@@ -132,7 +132,7 @@ public class graphics extends JPanel {
             y2 += 60 + 2 * space;
         }
 
-        //Right side 16 Team Names
+        //Left side 16 Team Names
 
         for(int i = 0, x32L = 11 + width * 2, y32L = 50; i < 16; i += 2){
             g.drawString(Main.RO32TM.get(i), x32L, y32L);
@@ -140,6 +140,18 @@ public class graphics extends JPanel {
             g.drawString(Main.RO32TM.get(i + 1), x32L, y32L);
             y32L += 60 + 2 * space;
         }
+
+        //Right side 16 Team Names
+
+        for(int i = 16, x32L = screen.width - (width * 3) - 10, y32L = 50; i < 32; i += 2){
+            g.drawString(Main.RO32TM.get(i), x32L, y32L);
+            y32L += 60 + 2 * space;
+            g.drawString(Main.RO32TM.get(i + 1), x32L, y32L);
+            y32L += 60 + 2 * space;
+
+
+        }
+
     }
 }
 /*               y1 = 25; y2 = 25;
