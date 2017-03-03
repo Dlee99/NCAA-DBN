@@ -7,6 +7,7 @@ public class Main {
 
 
     public static void main(String[] args) throws IOException {
+        bracketFrame.cFrame();
         ArrayList<String> tm = new ArrayList<>();
         ArrayList<Double> wl = new ArrayList<>();
         ArrayList<Double> SOS = new ArrayList<>();
