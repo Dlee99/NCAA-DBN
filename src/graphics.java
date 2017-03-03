@@ -32,9 +32,9 @@ public class graphics extends JPanel {
             y2 += space;
         }
         for(int i = 0, x64L = 10, y64L = 10; i < 32; i += 2) {
-            g.drawString(Main.tm.get(i), 10, y64L);
+            g.drawString(Main.tm.get(i), x64L, y64L);
             y64L += 30;
-            g.drawString(Main.tm.get(i + 1), 10, y64L);
+            g.drawString(Main.tm.get(i + 1), x64L, y64L);
             y64L += space;
         }
     }
