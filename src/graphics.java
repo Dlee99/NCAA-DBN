@@ -154,13 +154,3 @@ public class graphics extends JPanel {
 
     }
 }
-/*               y1 = 25; y2 = 25;
-        for (int i = 0, x1 = screen.width - width - 10, x2 = x1 - width; i < 8; i++) {
-            g.drawLine(x1, y1, x2, y2);
-            y1 += 30 + space;
-            g.drawLine(x2, y1, x2, y2);
-            y2 += 30 + space;
-            g.drawLine(x1, y1, x2, y2);
-            y1 += 30 + space;
-            y2 += 30 + space;
-        }*/
