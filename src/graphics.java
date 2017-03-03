@@ -64,5 +64,13 @@ public class graphics extends JPanel {
             y1 += 30 + space;
             y2 += 30 + space;
         }
+         for(int i=32, x64R = screen.width-70, y64R =10; i<64; i+=2){
+            g.drawString(Main.tm.get(i), x64R,y64R);
+            y64R+=30;
+            g.drawString(Main.tm.get(i + 1), x64R, y64R);
+            y64R += space;
+
+
+        }
     }
 }
