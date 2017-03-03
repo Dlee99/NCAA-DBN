@@ -11,8 +11,9 @@ public class graphics extends JPanel {
         g.setColor(Color.black);
         Dimension screen = Toolkit.getDefaultToolkit().getScreenSize();
         int space = (screen.height - (30 * 16)) / 20;
+        int width = 60; //implement standardization for window size
         int y1 = 10, y2 = 10;
-        for (int i = 0, x1 = 10, x2 = x1 + 60; i < 16; i++) {
+        for (int i = 0, x1 = 10, x2 = x1 + width; i < 16; i++) {
             g.drawLine(x1, y1, x2, y2);
             y1 += 30;
             g.drawLine(x2, y1, x2, y2);
@@ -22,7 +23,7 @@ public class graphics extends JPanel {
             y2 += space;
         }
         y1 = 10; y2 = 10;
-        for (int i = 0, x1 = screen.width - 10, x2 = x1 - 60; i < 16; i++) {
+        for (int i = 0, x1 = screen.width - 10, x2 = x1 - width; i < 16; i++) {
             g.drawLine(x1, y1, x2, y2);
             y1 += 30;
             g.drawLine(x2, y1, x2, y2);
@@ -37,6 +38,7 @@ public class graphics extends JPanel {
             g.drawString(Main.tm.get(i + 1), x64L, y64L);
             y64L += space;
         }
+        /*
         for(int x1=70, x2=160,yy1=25,yy2=25,i=0; i<16; i++) {
             g.drawLine(x1, yy1, x2, yy2);
             yy1 += 60;
@@ -50,4 +52,17 @@ public class graphics extends JPanel {
 
 
 
-        }}}
+        }
+        */
+        y1 = 25; y2 = 25;
+        for (int i = 0, x1 = 70, x2 = x1 + width; i < 8; i++) {
+            g.drawLine(x1, y1, x2, y2);
+            y1 += 30 + space;
+            g.drawLine(x2, y1, x2, y2);
+            y2 += 30 + space;
+            g.drawLine(x1, y1, x2, y2);
+            y1 += 30 + space;
+            y2 += 30 + space;
+        }
+    }
+}
