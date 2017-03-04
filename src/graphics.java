@@ -238,13 +238,24 @@ public class graphics extends JPanel {
             g.drawString(Main.RO4TM.get(i + 1), x4L, y4L);
             y4L += 240 + 8 * space;
         }
+        JTextField FinalLeft = new JTextField();
+        FinalLeft.setSize(200,100);
+        FinalLeft.setLocation( width * 4 + 110, 240 + 8 * space/2);
+        FinalLeft.setText(Main.FinalTM.get(0));
+        FinalLeft.setHorizontalAlignment(JTextField.CENTER);
+        FinalLeft.setVisible(true);
+        bracketFrame.frame.add(FinalLeft);
 
-        JTextField label = new JTextField();
-       label.setSize(100,100);
-        label.setLocation( screen.width - (width * 4) - 10- width, 240 + 8 * space/2);
-        label.setText("hi");
-        label.setVisible(true);
-        bracketFrame.frame.add(label);
+        JTextField FinalRight = new JTextField();
+        FinalRight.setSize(200,100);
+        FinalRight.setLocation( screen.width - (width * 4) - 10- width - 100, 240 + 8 * space/2);
+        FinalRight.setText(Main.FinalTM.get(1));
+        FinalRight.setHorizontalAlignment(JTextField.CENTER);
+        FinalRight.setVisible(true);
+        bracketFrame.frame.add(FinalRight);
+
+
+
 
         g.setFont(new Font("Times New Roman", Font.BOLD,35));
         g.drawString("South", 500,240);

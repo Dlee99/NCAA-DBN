@@ -1,7 +1,8 @@
 import javax.swing.*;
 import java.awt.*;
-public static    JFrame frame = new JFrame();
+
 public class bracketFrame extends JFrame{
+    public static JFrame frame = new JFrame();
     public static void cFrame(){
      
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
