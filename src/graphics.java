@@ -1,12 +1,8 @@
 import javax.swing.*;
 import java.awt.*;
-import java.io.File;
-import java.io.IOException;
-import java.util.Scanner;
 
 public class graphics extends JPanel {
     public void paintComponent(Graphics g) {
-
         super.paintComponent(g);
         this.setBackground(Color.DARK_GRAY);
         g.setColor(Color.white);
@@ -40,24 +36,6 @@ public class graphics extends JPanel {
             y2 += space;
         }
 
-        //Left side Round 64 Team Names
-
-        for (int i = 0, x64L = 10, y64L = 10; i < 32; i += 2) {
-            g.drawString(Main.tm.get(i), x64L, y64L);
-            y64L += 30;
-            g.drawString(Main.tm.get(i + 1), x64L, y64L);
-            y64L += space;
-        }
-
-        //Right side Round 64 Team Names
-
-        for (int i = 32, x64R = screen.width - width - 10, y64R = 10; i < 64; i += 2) {
-            g.drawString(Main.tm.get(i), x64R, y64R);
-            y64R += 30;
-            g.drawString(Main.tm.get(i + 1), x64R, y64R);
-            y64R += space;
-        }
-
         //Left side Round 32 Bracket Lines
 
         y1 = 25;
@@ -84,28 +62,6 @@ public class graphics extends JPanel {
             g.drawLine(x1, y1, x2, y2);
             y1 += 30 + space;
             y2 += 30 + space;
-        }
-
-        //Left side Round 32 Team Names
-
-        for (int i = 0, x32L = 10 + width, y32L = 25; i < 16; i += 2) {
-            g.drawString(Main.RO32TM.get(i), x32L, y32L);
-            y32L += 30 + space;
-            g.drawString(Main.RO32TM.get(i + 1), x32L, y32L);
-            y32L += 30 + space;
-
-
-        }
-
-        //Right side Round 32 Team Names
-
-        for (int i = 16, x32R = screen.width - (width * 2) - 10, y32R = 25; i < 31; i += 2) {
-            g.drawString(Main.RO32TM.get(i), x32R, y32R);
-            y32R += 30 + space;
-            g.drawString(Main.RO32TM.get(i + 1), x32R, y32R);
-            y32R += 30 + space;
-
-
         }
 
         //Left side Round 16 Bracket Lines
@@ -136,24 +92,6 @@ public class graphics extends JPanel {
             y2 += 60 + 2 * space;
         }
 
-        //Left side 16 Team Names
-
-        for (int i = 0, x16L = 10 + width * 2, y16L = 50; i < 8; i += 2) {
-            g.drawString(Main.RO16TM.get(i), x16L, y16L);
-            y16L += 60 + 2 * space;
-            g.drawString(Main.RO16TM.get(i + 1), x16L, y16L);
-            y16L += 60 + 2 * space;
-        }
-
-        //Right side 16 Team Names
-
-        for (int i = 8, x16L = screen.width - (width * 3) - 10, y16L = 50; i < 16; i += 2) {
-            g.drawString(Main.RO16TM.get(i), x16L, y16L);
-            y16L += 60 + 2 * space;
-            g.drawString(Main.RO16TM.get(i + 1), x16L, y16L);
-            y16L += 60 + 2 * space;
-        }
-
         //Left side Round 8 Bracket Lines
 
         y1 = 95;
@@ -180,25 +118,6 @@ public class graphics extends JPanel {
             g.drawLine(x1, y1, x2, y2);
             y1 += 120 + 4 * space;
             y2 += 120 + 4 * space;
-        }
-
-        //Left side Round 8 Team Names
-
-        for (int i = 0, x8L = 10 + width * 3, y8L = 95; i < 4; i += 2) {
-            g.drawString(Main.RO8TM.get(i), x8L, y8L);
-            y8L += 120 + 4 * space;
-            g.drawString(Main.RO8TM.get(i + 1), x8L, y8L);
-            y8L += 120 + 4 * space;
-        }
-
-        //Right side Round 8 Team Names
-
-
-        for (int i = 4, x8L = screen.width - (width * 4) - 10, y8L = 95; i < 8; i += 2) {
-            g.drawString(Main.RO8TM.get(i), x8L, y8L);
-            y8L += 120 + 4 * space;
-            g.drawString(Main.RO8TM.get(i + 1), x8L, y8L);
-            y8L += 120 + 4 * space;
         }
 
         //Left side Round 4 Bracket Lines
@@ -229,6 +148,87 @@ public class graphics extends JPanel {
             y2 += 240 + 8 * space;
         }
 
+        //Left side Round 64 Team Names
+
+        for (int i = 0, x64L = 10, y64L = 10; i < 32; i += 2) {
+            g.drawString(Main.tm.get(i), x64L, y64L);
+            y64L += 30;
+            g.drawString(Main.tm.get(i + 1), x64L, y64L);
+            y64L += space;
+        }
+
+        //Right side Round 64 Team Names
+
+        for (int i = 32, x64R = screen.width - width - 10, y64R = 10; i < 64; i += 2) {
+            g.drawString(Main.tm.get(i), x64R, y64R);
+            y64R += 30;
+            g.drawString(Main.tm.get(i + 1), x64R, y64R);
+            y64R += space;
+        }
+
+
+
+        //Left side Round 32 Team Names
+
+        for (int i = 0, x32L = 10 + width, y32L = 25; i < 16; i += 2) {
+            g.drawString(Main.RO32TM.get(i), x32L, y32L);
+            y32L += 30 + space;
+            g.drawString(Main.RO32TM.get(i + 1), x32L, y32L);
+            y32L += 30 + space;
+
+
+        }
+
+        //Right side Round 32 Team Names
+
+        for (int i = 16, x32R = screen.width - (width * 2) - 10, y32R = 25; i < 31; i += 2) {
+            g.drawString(Main.RO32TM.get(i), x32R, y32R);
+            y32R += 30 + space;
+            g.drawString(Main.RO32TM.get(i + 1), x32R, y32R);
+            y32R += 30 + space;
+
+
+        }
+
+
+        //Left side 16 Team Names
+
+        for (int i = 0, x16L = 10 + width * 2, y16L = 50; i < 8; i += 2) {
+            g.drawString(Main.RO16TM.get(i), x16L, y16L);
+            y16L += 60 + 2 * space;
+            g.drawString(Main.RO16TM.get(i + 1), x16L, y16L);
+            y16L += 60 + 2 * space;
+        }
+
+        //Right side 16 Team Names
+
+        for (int i = 8, x16L = screen.width - (width * 3) - 10, y16L = 50; i < 16; i += 2) {
+            g.drawString(Main.RO16TM.get(i), x16L, y16L);
+            y16L += 60 + 2 * space;
+            g.drawString(Main.RO16TM.get(i + 1), x16L, y16L);
+            y16L += 60 + 2 * space;
+        }
+
+
+        //Left side Round 8 Team Names
+
+        for (int i = 0, x8L = 10 + width * 3, y8L = 95; i < 4; i += 2) {
+            g.drawString(Main.RO8TM.get(i), x8L, y8L);
+            y8L += 120 + 4 * space;
+            g.drawString(Main.RO8TM.get(i + 1), x8L, y8L);
+            y8L += 120 + 4 * space;
+        }
+
+        //Right side Round 8 Team Names
+
+
+        for (int i = 4, x8L = screen.width - (width * 4) - 10, y8L = 95; i < 8; i += 2) {
+            g.drawString(Main.RO8TM.get(i), x8L, y8L);
+            y8L += 120 + 4 * space;
+            g.drawString(Main.RO8TM.get(i + 1), x8L, y8L);
+            y8L += 120 + 4 * space;
+        }
+
         //Left side Round 4 Team Names
 
         for (int i = 0, x4L = 10 + width * 4, y4L = 180; i < 2; i += 2) {
@@ -248,40 +248,36 @@ public class graphics extends JPanel {
         }
 
         int mid = ((screen.width - (width * 7) - 120) + (screen.width - (width * 4) - 10 - width - 100)) / 2;
-        if(!Main.paint) {
-            JTextField FinalLeft = new JTextField();
-            FinalLeft.setBackground(Color.DARK_GRAY);
-            FinalLeft.setSize(200, 50);
-            FinalLeft.setLocation(screen.width - (width * 7) - 120, 240 + 8 * space / 2);
-            FinalLeft.setText(Main.FinalTM.get(0));
-            FinalLeft.setHorizontalAlignment(JTextField.CENTER);
-
-            Main.frame.add(FinalLeft);
-            FinalLeft.setForeground(Color.WHITE);
+        JTextField FinalLeft = new JTextField();
+        FinalLeft.setBackground(Color.DARK_GRAY);
+        FinalLeft.setSize(200, 50);
+        FinalLeft.setLocation(screen.width - (width * 7) - 120, 240 + 8 * space / 2);
+        FinalLeft.setText(Main.FinalTM.get(0));
+        FinalLeft.setHorizontalAlignment(JTextField.CENTER);
+        Main.frame.add(FinalLeft);
+        FinalLeft.setForeground(Color.WHITE);
 
 
-            JTextField FinalRight = new JTextField();
-            FinalRight.setBackground(Color.DARK_GRAY);
-            FinalRight.setSize(200, 50);
-            FinalRight.setLocation(screen.width - (width * 4) - 10 - width - 100, 240 + 8 * space / 2);
-            FinalRight.setText(Main.FinalTM.get(1));
-            FinalRight.setHorizontalAlignment(JTextField.CENTER);
-            Main.frame.add(FinalRight);
-            FinalRight.setForeground(Color.WHITE);
+        JTextField FinalRight = new JTextField();
+        FinalRight.setBackground(Color.DARK_GRAY);
+        FinalRight.setSize(200, 50);
+        FinalRight.setLocation(screen.width - (width * 4) - 10 - width - 100, 240 + 8 * space / 2);
+        FinalRight.setText(Main.FinalTM.get(1));
+        FinalRight.setHorizontalAlignment(JTextField.CENTER);
+        Main.frame.add(FinalRight);
+        FinalRight.setForeground(Color.WHITE);
 
 
-            JTextField winner = new JTextField();
-            winner.setBackground(Color.DARK_GRAY);
+        JTextField winner = new JTextField();
+        winner.setBackground(Color.DARK_GRAY);
 
-            winner.setSize(200, 50);
-            winner.setLocation(mid, 240 + 8 * space);
-            winner.setText(Main.FinalTM.get(0));
-            winner.setHorizontalAlignment(JTextField.CENTER);
+        winner.setSize(200, 50);
+        winner.setLocation(mid, 240 + 8 * space);
+        winner.setText(Main.FinalTM.get(0));
+        winner.setHorizontalAlignment(JTextField.CENTER);
 
-            Main.frame.add(winner);
-            winner.setForeground(Color.WHITE);
-            Main.paint = true;
-        }
+        Main.frame.add(winner);
+        winner.setForeground(Color.WHITE);
 
 
         g.setFont(new Font("Times New Roman", Font.BOLD, 35));

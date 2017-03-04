@@ -1,13 +1,11 @@
 import javax.swing.*;
 import java.awt.*;
-import java.sql.Time;
 
 public class bracketFrame extends JFrame{
 
     public bracketFrame(){
 
         super("Bracket Predictor");
-
         graphics g = new graphics();
         setContentPane(g);
         setResizable(false);

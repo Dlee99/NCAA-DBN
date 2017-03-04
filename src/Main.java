@@ -1,5 +1,3 @@
-import com.sun.org.apache.xpath.internal.SourceTree;
-
 import java.io.*;
 import java.util.*;
 
@@ -24,9 +22,8 @@ public class Main {
     public static ArrayList<String> FinalTM = new ArrayList<>();
     public static ArrayList<Double> FinalNUM = new ArrayList<>();
     public static ArrayList<Double> FinalSOS = new ArrayList<>();
-    public static String Winner = null;
-    public static bracketFrame frame = new bracketFrame();
-    public static boolean paint = false;
+    public static String Winner;
+    public static bracketFrame frame;
     public static void main(String[] args) throws IOException {
         Scanner test = new Scanner(new File("teams.txt"));
         System.out.println("ROUND OF 64");
@@ -181,10 +178,7 @@ public class Main {
             }
 
         }
-        frame.repaint();
-
-
-
+        frame = new bracketFrame();
     }
 
 
