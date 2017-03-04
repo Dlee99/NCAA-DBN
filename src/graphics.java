@@ -254,17 +254,19 @@ public class graphics extends JPanel {
         FinalLeft.setHorizontalAlignment(JTextField.CENTER);
         FinalLeft.setVisible(true);
         bracketFrame.frame.add(FinalLeft);
+        FinalLeft.setForeground(Color.WHITE);
 
 
         JTextField FinalRight = new JTextField();
         FinalRight.setBackground(Color.DARK_GRAY);
-
         FinalRight.setSize(200, 50);
         FinalRight.setLocation(screen.width - (width * 4) - 10 - width - 100, 240 + 8 * space / 2);
         FinalRight.setText(Main.FinalTM.get(1));
         FinalRight.setHorizontalAlignment(JTextField.CENTER);
         FinalRight.setVisible(true);
         bracketFrame.frame.add(FinalRight);
+        FinalRight.setForeground(Color.WHITE);
+
         int mid = ((screen.width - (width * 7) - 120) + (screen.width - (width * 4) - 10 - width - 100)) / 2;
 
         JTextField winner = new JTextField();
@@ -276,6 +278,7 @@ public class graphics extends JPanel {
         winner.setHorizontalAlignment(JTextField.CENTER);
         winner.setVisible(true);
         bracketFrame.frame.add(winner);
+        winner.setForeground(Color.WHITE);
 
 
         g.setFont(new Font("Times New Roman", Font.BOLD, 35));
