@@ -187,13 +187,60 @@ public class graphics extends JPanel {
 
         //Right side Round 8 Team Names
 
+
         for(int i = 4, x8L = screen.width - (width * 4) - 10, y8L = 95; i < 8; i += 2){
             g.drawString(Main.RO8TM.get(i), x8L, y8L);
             y8L += 120 + 4 * space;
             g.drawString(Main.RO8TM.get(i + 1), x8L, y8L);
             y8L += 120 + 4 * space;
         }
- g.setFont(new Font("Times New Roman", Font.BOLD,35));
+
+        //Left side Round 4 Bracket Lines
+
+        y1 = 180; y2 = 180;
+        for (int i = 0, x1 =10+4*width, x2 = x1 + width ; i < 2; i++) {
+            g.drawLine(x1, y1, x2, y2);
+            y1 += 240 + 8 * space;
+            g.drawLine(x2, y1, x2, y2);
+            y2 += 240 + 8 * space;
+            g.drawLine(x1, y1, x2, y2);
+            y1 += 240 + 8 * space;
+            y2 += 240 + 8 * space;
+        }
+
+        //Right side Round 4 Bracket Lines
+
+        y1 = 180; y2 = 180;
+        for (int i = 0, x1 = screen.width - (width * 4) - 10, x2 = x1 - width ; i < 2; i++) {
+            g.drawLine(x1, y1, x2, y2);
+            y1 += 240 + 8 * space;
+            g.drawLine(x2, y1, x2, y2);
+            y2 += 240 + 8 * space;
+            g.drawLine(x1, y1, x2, y2);
+            y1 += 240 + 8 * space;
+            y2 += 240 + 8 * space;
+        }
+
+        //Left side Round 4 Team Names
+
+        for(int i = 0, x4L = 10 + width * 4, y4L = 180; i < 2; i += 2){
+            g.drawString(Main.RO4TM.get(i), x4L, y4L);
+            y4L += 240 + 8 * space;
+            g.drawString(Main.RO4TM.get(i + 1), x4L, y4L);
+            y4L += 240 + 8 * space;
+        }
+
+        //Right side Round 4 Team Names
+
+        for(int i = 2, x4L = screen.width - (width * 5) - 10, y4L = 180; i < 4; i += 2){
+            g.drawString(Main.RO8TM.get(i), x4L, y4L);
+            y4L += 240 + 8 * space;
+            g.drawString(Main.RO8TM.get(i + 1), x4L, y4L);
+            y4L += 240 + 8 * space;
+        }
+
+
+        g.setFont(new Font("Times New Roman", Font.BOLD,35));
         g.drawString("South", 150,240);
         g.drawString("West" , 150,700);
         g.drawString("East",1700,240);
