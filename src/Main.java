@@ -24,6 +24,7 @@ public class Main {
     public static ArrayList<String> FinalTM = new ArrayList<>();
     public static ArrayList<Double> FinalNUM = new ArrayList<>();
     public static ArrayList<Double> FinalSOS = new ArrayList<>();
+    public static String Winner = null;
     public static void main(String[] args) throws IOException {
         bracketFrame.cFrame();
 
@@ -169,10 +170,12 @@ public class Main {
             System.out.println(FinalTM.get(i) + "\t" + FinalTM.get(i + 1) + ":\t" + ZTable.p(FinalNUM.get(i), FinalNUM.get(i + 1)));
             if(ZTable.p(Corrected1, Corrected2) >= .5){
                 System.out.println(FinalTM.get(i) +"\tWins!");
+                Winner = FinalTM.get(i);
                 break;
 
             } else{
                 System.out.println(FinalTM.get(i + 1) + "\tWins!");
+                Winner = FinalTM.get(i);
                 break;
 
 

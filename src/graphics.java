@@ -239,25 +239,36 @@ public class graphics extends JPanel {
             y4L += 240 + 8 * space;
         }
         JTextField FinalLeft = new JTextField();
-        FinalLeft.setSize(200,100);
-        FinalLeft.setLocation( width * 4 + 110, 240 + 8 * space/2);
+        FinalLeft.setSize(200,50);
+        FinalLeft.setLocation( screen.width - (width * 7) - 120, 240 + 8 * space/2);
         FinalLeft.setText(Main.FinalTM.get(0));
         FinalLeft.setHorizontalAlignment(JTextField.CENTER);
         FinalLeft.setVisible(true);
         bracketFrame.frame.add(FinalLeft);
 
         JTextField FinalRight = new JTextField();
-        FinalRight.setSize(200,100);
-        FinalRight.setLocation( screen.width - (width * 4) - 10- width - 100, 240 + 8 * space/2);
+        FinalRight.setSize(200,50);
+        FinalRight.setLocation( screen.width - (width * 5) -110, 240 + 8 * space/2);
         FinalRight.setText(Main.FinalTM.get(1));
         FinalRight.setHorizontalAlignment(JTextField.CENTER);
         FinalRight.setVisible(true);
         bracketFrame.frame.add(FinalRight);
 
+        JTextField FinalWinner = new JTextField();
+        FinalWinner.setSize(200, 50);
+        int midx = ((screen.width-(width*7)-120)+ (screen.width - (width * 4) - 10- width - 100))/2;
+        FinalWinner.setLocation(midx, 240 + 8 * space / 2 + 5 * space);
+        FinalWinner.setText(Main.Winner);
+        FinalWinner.setHorizontalAlignment(JTextField.CENTER);
+        FinalWinner.setVisible(true);
+        bracketFrame.frame.add(FinalWinner);
+
 
 
 
         g.setFont(new Font("Times New Roman", Font.BOLD,35));
+
+        g.drawString("WINNER", midx + 20, 255 + 12 * space + 20);
         g.drawString("South", 500,240);
         g.drawString("West" , 500,700);
         g.drawString("East",1330,210);
