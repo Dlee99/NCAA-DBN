@@ -239,22 +239,29 @@ public class graphics extends JPanel {
             y4L += 240 + 8 * space;
         }
         JTextField FinalLeft = new JTextField();
-        FinalLeft.setSize(200,100);
-        FinalLeft.setLocation( width * 4 + 110, 240 + 8 * space/2);
+        FinalLeft.setSize(200,50);
+        FinalLeft.setLocation( screen.width-(width*7)-120, 240 + 8 * space/2);
         FinalLeft.setText(Main.FinalTM.get(0));
         FinalLeft.setHorizontalAlignment(JTextField.CENTER);
         FinalLeft.setVisible(true);
         bracketFrame.frame.add(FinalLeft);
 
         JTextField FinalRight = new JTextField();
-        FinalRight.setSize(200,100);
+        FinalRight.setSize(200,50);
         FinalRight.setLocation( screen.width - (width * 4) - 10- width - 100, 240 + 8 * space/2);
         FinalRight.setText(Main.FinalTM.get(1));
         FinalRight.setHorizontalAlignment(JTextField.CENTER);
         FinalRight.setVisible(true);
         bracketFrame.frame.add(FinalRight);
+    int mid = ((screen.width-(width*7)-120)+ (screen.width - (width * 4) - 10- width - 100))/2;
 
-
+        JTextField winner = new JTextField();
+        winner.setSize(200,50);
+        winner.setLocation( mid, 240 + 8 * space);
+        winner.setText(Main.FinalTM.get(0));
+        winner.setHorizontalAlignment(JTextField.CENTER);
+        winner.setVisible(true);
+        bracketFrame.frame.add(winner);
 
 
         g.setFont(new Font("Times New Roman", Font.BOLD,35));
@@ -263,5 +270,7 @@ public class graphics extends JPanel {
         g.drawString("East",1330,210);
         g.drawString("Midwest", 1300,720);
         g.drawString("BRACKET PREDICTOR", bracketFrame.frame.getWidth()/2-205,bracketFrame.frame.getHeight()/9);
+
+
     }
 }
