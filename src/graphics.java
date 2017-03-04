@@ -239,16 +239,18 @@ public class graphics extends JPanel {
             y4L += 240 + 8 * space;
         }
 
- JLabel label = new JLabel();
+        JTextField label = new JTextField();
+       label.setSize(100,100);
         label.setLocation( screen.width - (width * 4) - 10- width, 240 + 8 * space/2);
         label.setText("hi");
         label.setVisible(true);
         bracketFrame.frame.add(label);
-        
+
         g.setFont(new Font("Times New Roman", Font.BOLD,35));
-        g.drawString("South", 150,240);
-        g.drawString("West" , 150,700);
-        g.drawString("East",1700,240);
-        g.drawString("Midwest", 1670,720);
+        g.drawString("South", 500,240);
+        g.drawString("West" , 500,700);
+        g.drawString("East",1330,210);
+        g.drawString("Midwest", 1300,720);
+        g.drawString("BRACKET PREDICTOR", bracketFrame.frame.getWidth()/2-205,bracketFrame.frame.getHeight()/9);
     }
 }
