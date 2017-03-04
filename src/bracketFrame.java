@@ -1,9 +1,9 @@
 import javax.swing.*;
 import java.awt.*;
-
+public static    JFrame frame = new JFrame();
 public class bracketFrame extends JFrame{
     public static void cFrame(){
-        JFrame frame = new JFrame();
+     
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(Toolkit.getDefaultToolkit().getScreenSize());
         frame.setVisible(true);
