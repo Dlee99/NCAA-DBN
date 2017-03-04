@@ -25,10 +25,9 @@ public class Main {
     public static ArrayList<Double> FinalNUM = new ArrayList<>();
     public static ArrayList<Double> FinalSOS = new ArrayList<>();
     public static String Winner = null;
+    public static bracketFrame frame = new bracketFrame();
+    public static boolean paint = false;
     public static void main(String[] args) throws IOException {
-        bracketFrame.cFrame();
-
-
         Scanner test = new Scanner(new File("teams.txt"));
         System.out.println("ROUND OF 64");
         System.out.println();
@@ -168,12 +167,12 @@ public class Main {
         for(int i = 0; i < FinalTM.size(); i = i + 2) {
             double Corrected1 = FinalNUM.get(i) * FinalSOS.get(i), Corrected2 = FinalNUM.get(i + 1) * FinalSOS.get(i + 1);
             System.out.println(FinalTM.get(i) + "\t" + FinalTM.get(i + 1) + ":\t" + ZTable.p(FinalNUM.get(i), FinalNUM.get(i + 1)));
-            if(ZTable.p(Corrected1, Corrected2) >= .5){
-                System.out.println(FinalTM.get(i) +"\tWins!");
+            if (ZTable.p(Corrected1, Corrected2) >= .5) {
+                System.out.println(FinalTM.get(i) + "\tWins!");
                 Winner = FinalTM.get(i);
                 break;
 
-            } else{
+            } else {
                 System.out.println(FinalTM.get(i + 1) + "\tWins!");
                 Winner = FinalTM.get(i);
                 break;
@@ -182,6 +181,8 @@ public class Main {
             }
 
         }
+        frame.repaint();
+
 
 
     }

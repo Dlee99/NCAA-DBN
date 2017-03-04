@@ -3,14 +3,18 @@ import java.awt.*;
 import java.sql.Time;
 
 public class bracketFrame extends JFrame{
-    public static JFrame frame = new JFrame();
-    public static void cFrame(){
-     
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(Toolkit.getDefaultToolkit().getScreenSize());
-        frame.setVisible(true);
+
+    public bracketFrame(){
+
+        super("Bracket Predictor");
+
         graphics g = new graphics();
-        frame.add(g);
+        setContentPane(g);
+        setResizable(false);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setSize(Toolkit.getDefaultToolkit().getScreenSize());
+        setVisible(true);
 
     }
+
 }

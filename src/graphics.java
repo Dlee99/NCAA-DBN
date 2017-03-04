@@ -5,8 +5,8 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class graphics extends JPanel {
-
     public void paintComponent(Graphics g) {
+
         super.paintComponent(g);
         this.setBackground(Color.DARK_GRAY);
         g.setColor(Color.white);
@@ -246,39 +246,42 @@ public class graphics extends JPanel {
             g.drawString(Main.RO4TM.get(i + 1), x4L, y4L);
             y4L += 240 + 8 * space;
         }
-        JTextField FinalLeft = new JTextField();
-        FinalLeft.setBackground(Color.DARK_GRAY);
-        FinalLeft.setSize(200, 50);
-        FinalLeft.setLocation(screen.width - (width * 7) - 120, 240 + 8 * space / 2);
-        FinalLeft.setText(Main.FinalTM.get(0));
-        FinalLeft.setHorizontalAlignment(JTextField.CENTER);
-        FinalLeft.setVisible(true);
-        bracketFrame.frame.add(FinalLeft);
-        FinalLeft.setForeground(Color.WHITE);
-
-
-        JTextField FinalRight = new JTextField();
-        FinalRight.setBackground(Color.DARK_GRAY);
-        FinalRight.setSize(200, 50);
-        FinalRight.setLocation(screen.width - (width * 4) - 10 - width - 100, 240 + 8 * space / 2);
-        FinalRight.setText(Main.FinalTM.get(1));
-        FinalRight.setHorizontalAlignment(JTextField.CENTER);
-        FinalRight.setVisible(true);
-        bracketFrame.frame.add(FinalRight);
-        FinalRight.setForeground(Color.WHITE);
 
         int mid = ((screen.width - (width * 7) - 120) + (screen.width - (width * 4) - 10 - width - 100)) / 2;
+        if(!Main.paint) {
+            JTextField FinalLeft = new JTextField();
+            FinalLeft.setBackground(Color.DARK_GRAY);
+            FinalLeft.setSize(200, 50);
+            FinalLeft.setLocation(screen.width - (width * 7) - 120, 240 + 8 * space / 2);
+            FinalLeft.setText(Main.FinalTM.get(0));
+            FinalLeft.setHorizontalAlignment(JTextField.CENTER);
 
-        JTextField winner = new JTextField();
-        winner.setBackground(Color.DARK_GRAY);
+            Main.frame.add(FinalLeft);
+            FinalLeft.setForeground(Color.WHITE);
 
-        winner.setSize(200, 50);
-        winner.setLocation(mid, 240 + 8 * space);
-        winner.setText(Main.FinalTM.get(0));
-        winner.setHorizontalAlignment(JTextField.CENTER);
-        winner.setVisible(true);
-        bracketFrame.frame.add(winner);
-        winner.setForeground(Color.WHITE);
+
+            JTextField FinalRight = new JTextField();
+            FinalRight.setBackground(Color.DARK_GRAY);
+            FinalRight.setSize(200, 50);
+            FinalRight.setLocation(screen.width - (width * 4) - 10 - width - 100, 240 + 8 * space / 2);
+            FinalRight.setText(Main.FinalTM.get(1));
+            FinalRight.setHorizontalAlignment(JTextField.CENTER);
+            Main.frame.add(FinalRight);
+            FinalRight.setForeground(Color.WHITE);
+
+
+            JTextField winner = new JTextField();
+            winner.setBackground(Color.DARK_GRAY);
+
+            winner.setSize(200, 50);
+            winner.setLocation(mid, 240 + 8 * space);
+            winner.setText(Main.FinalTM.get(0));
+            winner.setHorizontalAlignment(JTextField.CENTER);
+
+            Main.frame.add(winner);
+            winner.setForeground(Color.WHITE);
+            Main.paint = true;
+        }
 
 
         g.setFont(new Font("Times New Roman", Font.BOLD, 35));
@@ -286,11 +289,12 @@ public class graphics extends JPanel {
         g.drawString("West", 500, 700);
         g.drawString("East", 1330, 210);
         g.drawString("Midwest", 1300, 720);
-        g.drawString("BRACKET PREDICTOR", bracketFrame.frame.getWidth() / 2 - 205, bracketFrame.frame.getHeight() / 9);
+        g.drawString("BRACKET PREDICTOR", Main.frame.getWidth() / 2 - 205, Main.frame.getHeight() / 9);
         g.drawString("WINNER", mid + 20, 255 + 12 * space + 20);
         g.setFont(new Font("Times New Roman", Font.ITALIC, 35));
-        g.drawString("Derek, Bubb, Nirali", bracketFrame.frame.getWidth() / 2 - 145, bracketFrame.frame.getHeight() / 2 + 300);
-
+        g.drawString("Derek, Bubb, Nirali", Main.frame.getWidth() / 2 - 145, Main.frame.getHeight() / 2 + 300);
+        g.finalize();
 
     }
+
 }
