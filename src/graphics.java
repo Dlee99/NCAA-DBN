@@ -86,7 +86,7 @@ public class graphics extends JPanel {
 
         //Left side Round 32 Team Names
 
-        for(int i = 0, x32L = 11 + width, y32L = 25; i < 16; i += 2){
+        for(int i = 0, x32L = 10 + width, y32L = 25; i < 16; i += 2){
             g.drawString(Main.RO32TM.get(i), x32L, y32L);
             y32L += 30 + space;
             g.drawString(Main.RO32TM.get(i + 1), x32L, y32L);
@@ -134,7 +134,7 @@ public class graphics extends JPanel {
 
         //Left side 16 Team Names
 
-        for(int i = 0, x16L = 11 + width * 2, y16L = 50; i < 8; i += 2){
+        for(int i = 0, x16L = 10 + width * 2, y16L = 50; i < 8; i += 2){
             g.drawString(Main.RO16TM.get(i), x16L, y16L);
             y16L += 60 + 2 * space;
             g.drawString(Main.RO16TM.get(i + 1), x16L, y16L);
@@ -148,8 +148,6 @@ public class graphics extends JPanel {
             y16L += 60 + 2 * space;
             g.drawString(Main.RO16TM.get(i + 1), x16L, y16L);
             y16L += 60 + 2 * space;
-
-
         }
 
         //Left side Round 8 Bracket Lines
@@ -176,6 +174,24 @@ public class graphics extends JPanel {
             g.drawLine(x1, y1, x2, y2);
             y1 += 120 + 4 * space;
             y2 += 120 + 4 * space;
+        }
+
+        //Left side Round 8 Team Names
+
+        for(int i = 0, x8L = 10 + width * 3, y8L = 95; i < 4; i += 2){
+            g.drawString(Main.RO8TM.get(i), x8L, y8L);
+            y8L += 120 + 4 * space;
+            g.drawString(Main.RO8TM.get(i + 1), x8L, y8L);
+            y8L += 120 + 4 * space;
+        }
+
+        //Right side Round 8 Team Names
+
+        for(int i = 4, x8L = screen.width - (width * 4) - 10, y8L = 95; i < 8; i += 2){
+            g.drawString(Main.RO8TM.get(i), x8L, y8L);
+            y8L += 120 + 4 * space;
+            g.drawString(Main.RO8TM.get(i + 1), x8L, y8L);
+            y8L += 120 + 4 * space;
         }
 
     }
