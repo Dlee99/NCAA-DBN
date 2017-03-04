@@ -233,9 +233,9 @@ public class graphics extends JPanel {
         //Right side Round 4 Team Names
 
         for(int i = 2, x4L = screen.width - (width * 5) - 10, y4L = 180; i < 4; i += 2){
-            g.drawString(Main.RO8TM.get(i), x4L, y4L);
+            g.drawString(Main.RO4TM.get(i), x4L, y4L);
             y4L += 240 + 8 * space;
-            g.drawString(Main.RO8TM.get(i + 1), x4L, y4L);
+            g.drawString(Main.RO4TM.get(i + 1), x4L, y4L);
             y4L += 240 + 8 * space;
         }
 
