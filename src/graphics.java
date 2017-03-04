@@ -193,6 +193,10 @@ public class graphics extends JPanel {
             g.drawString(Main.RO8TM.get(i + 1), x8L, y8L);
             y8L += 120 + 4 * space;
         }
-
+ g.setFont(new Font("Times New Roman", Font.BOLD,35));
+        g.drawString("South", 150,240);
+        g.drawString("West" , 150,700);
+        g.drawString("East",1700,240);
+        g.drawString("Midwest", 1670,720);
     }
 }
