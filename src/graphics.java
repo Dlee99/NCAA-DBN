@@ -268,7 +268,7 @@ public class graphics extends JPanel {
 
         g.setFont(new Font("Times New Roman", Font.BOLD,35));
 
-        g.drawString("WINNER", midx + 20, 255 + 12 * space + 20);
+        g.drawString("WINNER", midx + 20, 255 + 12 * space + 40);
         g.drawString("South", 500,240);
         g.drawString("West" , 500,700);
         g.drawString("East",1330,210);
