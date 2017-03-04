@@ -4,13 +4,13 @@ import java.awt.*;
 public class graphics extends JPanel {
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
-        this.setBackground(Color.DARK_GRAY);
+        this.setBackground(Color.WHITE);
         g.setColor(Color.white);
         Dimension screen = Toolkit.getDefaultToolkit().getScreenSize();
         int space = (screen.height - (30 * 16)) / 20;
         int width = (screen.width - 20) / 12;
         //Left side Round 64 Bracket Lines
-        g.setColor(Color.white);
+        g.setColor(Color.blue);
         int y1 = 10, y2 = 10;
         for (int i = 0, x1 = 10, x2 = x1 + width; i < 16; i++) {
             g.drawLine(x1, y1, x2, y2);
@@ -249,27 +249,27 @@ public class graphics extends JPanel {
 
         int mid = ((screen.width - (width * 7) - 120) + (screen.width - (width * 4) - 10 - width - 100)) / 2;
         JTextField FinalLeft = new JTextField();
-        FinalLeft.setBackground(Color.DARK_GRAY);
+        FinalLeft.setBackground(Color.white);
         FinalLeft.setSize(200, 50);
         FinalLeft.setLocation(screen.width - (width * 7) - 120, 240 + 8 * space / 2);
         FinalLeft.setText(Main.FinalTM.get(0));
         FinalLeft.setHorizontalAlignment(JTextField.CENTER);
         Main.frame.add(FinalLeft);
-        FinalLeft.setForeground(Color.WHITE);
+        FinalLeft.setForeground(Color.blue);
 
 
         JTextField FinalRight = new JTextField();
-        FinalRight.setBackground(Color.DARK_GRAY);
+        FinalRight.setBackground(Color.white);
         FinalRight.setSize(200, 50);
         FinalRight.setLocation(screen.width - (width * 4) - 10 - width - 100, 240 + 8 * space / 2);
         FinalRight.setText(Main.FinalTM.get(1));
         FinalRight.setHorizontalAlignment(JTextField.CENTER);
         Main.frame.add(FinalRight);
-        FinalRight.setForeground(Color.WHITE);
+        FinalRight.setForeground(Color.blue);
 
 
         JTextField winner = new JTextField();
-        winner.setBackground(Color.DARK_GRAY);
+        winner.setBackground(Color.white);
 
         winner.setSize(200, 50);
         winner.setLocation(mid, 240 + 8 * space);
@@ -277,7 +277,7 @@ public class graphics extends JPanel {
         winner.setHorizontalAlignment(JTextField.CENTER);
 
         Main.frame.add(winner);
-        winner.setForeground(Color.WHITE);
+        winner.setForeground(Color.blue);
 
 
         g.setFont(new Font("Times New Roman", Font.BOLD, 35));
@@ -289,6 +289,7 @@ public class graphics extends JPanel {
         g.drawString("WINNER", mid + 20, 255 + 12 * space + 20);
         g.setFont(new Font("Times New Roman", Font.ITALIC, 35));
         g.drawString("Derek, Bubb, Nirali", Main.frame.getWidth() / 2 - 145, Main.frame.getHeight() / 2 + 300);
+        g.drawString("a.k.a Bracketology Experts", Main.frame.getWidth() / 2 - 180,Main.frame.getHeight() / 2 + 350);
         g.finalize();
 
     }
