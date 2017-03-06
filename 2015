@@ -1,64 +1,64 @@
-Kentucky,1,.58
-Hampton,.4848,.446
-Cincinnati,.6875,.557
-Purdue,.6363,.552
-West Virginia,.90625,.577
-Buffalo,.6875,.54
-Maryland,.8181,.564
-Valparaiso,.875,.477
-Butler,.6875,.569
-Texas, .6060,.577
-Notre Dame,.8529,.563
-Northeastern,.67647,.489
-Wichita State,.875,.543
-Indiana,.6060,.569
-Kansas,.7647,.623,
-New Mexico State,.6969,.507
-Wisconsin,.91176,.605
-Coastal Carolina,.7272,.456
-Oregon,.73529,.567
-Oklahoma State,.580645,.587
-Arkansas,.7647,.63
-Wofford,.823529,.487
-North Carolina,.6857,.621
-Harvard,.7586206,.509
-Xavier,.617647,.591
-Mississippi,.625,.555
-Baylor,.7272,.596
-Georgia State,.7272,.507
-VCU,.742857,.579
-Ohio State,.6969,.557
-Arizona,.911764,.581
-Texas Southern,.64705,.461
-Villanova, .9,.5
-Lafayette,.625,.497
-NC State,.6060,.598
-LSU,.6875,.534
-UNI,.9090,.501
-Wyoming,.73529,.502
-Lousivile,.75,.583
-UC Irvine,.6363,.504
-Providence,.6667,.589
-Dayton,.7575,.534
-Oklahoma,.6667,.588
-Albany,.75,.46
-Michigan State,.67647, .604
-Georgia,.65625,.562
-Virginia,.90625,.576
-Belmont,.6875,.48
-Duke,.87878,.61
-Robert Morris,.5757,.484
-San Diego State,.764705,.547
-Saint John's,.65625,.57
-Utah,.75,.58
-SF Austin,.8787,.493
-Georgetown,.677419,.588
-Eastern Washington,.764705,.481
-SMU,.8181,.558
-UCLA,.6060,.579
-Iowa State,.7575,.583
-UAB,.5588,.525
-Iowa,.65625,.572
-Davidson,.77419,.522
-Gonzaga,.94,.552
-North Dakota State,.71875,.470
+Kentucky,1,.58,1
+Hampton,.4848,.446,16
+Cincinnati,.6875,.557,8
+Purdue,.6363,.552,9
+West Virginia,.90625,.577,5
+Buffalo,.6875,.54,12
+Maryland,.8181,.564,4
+Valparaiso,.875,.477,13
+Butler,.6875,.569,6
+Texas, .6060,.577,11
+Notre Dame,.8529,.563,3
+Northeastern,.67647,.489,14
+Wichita State,.875,.543,7
+Indiana,.6060,.569,10
+Kansas,.7647,.623,2
+New Mexico State,.6969,.507,15
+Wisconsin,.91176,.605,1
+Coastal Carolina,.7272,.456,16
+Oregon,.73529,.567,8
+Oklahoma State,.580645,.587,9
+Arkansas,.7647,.63,5
+Wofford,.823529,.487,12
+North Carolina,.6857,.621,4
+Harvard,.7586206,.509,13
+Xavier,.617647,.591,6
+Mississippi,.625,.555,11
+Baylor,.7272,.596,3
+Georgia State,.7272,.507,14
+VCU,.742857,.579,7
+Ohio State,.6969,.557,10
+Arizona,.911764,.581,2
+Texas Southern,.64705,.461,15
+Villanova, .9,.5,1
+Lafayette,.625,.497,16
+NC State,.6060,.598,8
+LSU,.6875,.534,9
+UNI,.9090,.501,5
+Wyoming,.73529,.502,12
+Lousivile,.75,.583,4
+UC Irvine,.6363,.504,13
+Providence,.6667,.589,6
+Dayton,.7575,.534,11
+Oklahoma,.6667,.588,3
+Albany,.75,.46,14
+Michigan State,.67647, .604,7
+Georgia,.65625,.562,10
+Virginia,.90625,.576,2
+Belmont,.6875,.48,15
+Duke,.87878,.61,1
+Robert Morris,.5757,.484,16
+San Diego State,.764705,.547,8
+Saint John's,.65625,.57,9
+Utah,.75,.58,5
+SF Austin,.8787,.493,12
+Georgetown,.677419,.588,4
+Eastern Washington,.764705,.481,13
+SMU,.8181,.558,6
+UCLA,.6060,.579,11
+Iowa State,.7575,.583,3
+UAB,.5588,.525,14
+Iowa,.65625,.572,7
+Davidson,.77419,.522,10
+Gonzaga,.94,.552,2
+North Dakota State,.71875,.470,15
