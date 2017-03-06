@@ -152,7 +152,7 @@ public class graphics extends JPanel {
 
         //Left side Round 64 Team Names
 
-        for (int i = 0, x64L = 10, y64L = 10; i < 32; i += 2) {
+        for (int i = 0, x64L = 10 + (width / 4), y64L = 10; i < 32; i += 2) {
             g.drawString(Main.tm.get(i), x64L, y64L);
             y64L += 30;
             g.drawString(Main.tm.get(i + 1), x64L, y64L);
@@ -161,7 +161,7 @@ public class graphics extends JPanel {
 
         //Right side Round 64 Team Names
 
-        for (int i = 32, x64R = screen.width - width - 10, y64R = 10; i < 64; i += 2) {
+        for (int i = 32, x64R = screen.width - width - 10 + (width / 4), y64R = 10; i < 64; i += 2) {
             g.drawString(Main.tm.get(i), x64R, y64R);
             y64R += 30;
             g.drawString(Main.tm.get(i + 1), x64R, y64R);
@@ -172,7 +172,7 @@ public class graphics extends JPanel {
 
         //Left side Round 32 Team Names
 
-        for (int i = 0, x32L = 10 + width, y32L = 25; i < 16; i += 2) {
+        for (int i = 0, x32L = 10 + width + (width / 4), y32L = 25; i < 16; i += 2) {
             g.drawString(Main.RO32TM.get(i), x32L, y32L);
             y32L += 30 + space;
             g.drawString(Main.RO32TM.get(i + 1), x32L, y32L);
@@ -183,7 +183,7 @@ public class graphics extends JPanel {
 
         //Right side Round 32 Team Names
 
-        for (int i = 16, x32R = screen.width - (width * 2) - 10, y32R = 25; i < 31; i += 2) {
+        for (int i = 16, x32R = screen.width - (width * 2) - 10 + (width / 4), y32R = 25; i < 31; i += 2) {
             g.drawString(Main.RO32TM.get(i), x32R, y32R);
             y32R += 30 + space;
             g.drawString(Main.RO32TM.get(i + 1), x32R, y32R);
@@ -195,7 +195,7 @@ public class graphics extends JPanel {
 
         //Left side 16 Team Names
 
-        for (int i = 0, x16L = 10 + width * 2, y16L = 50; i < 8; i += 2) {
+        for (int i = 0, x16L = 10 + width * 2 + (width / 4), y16L = 50; i < 8; i += 2) {
             g.drawString(Main.RO16TM.get(i), x16L, y16L);
             y16L += 60 + 2 * space;
             g.drawString(Main.RO16TM.get(i + 1), x16L, y16L);
@@ -204,7 +204,7 @@ public class graphics extends JPanel {
 
         //Right side 16 Team Names
 
-        for (int i = 8, x16L = screen.width - (width * 3) - 10, y16L = 50; i < 16; i += 2) {
+        for (int i = 8, x16L = screen.width - (width * 3) - 10 + (width / 4), y16L = 50; i < 16; i += 2) {
             g.drawString(Main.RO16TM.get(i), x16L, y16L);
             y16L += 60 + 2 * space;
             g.drawString(Main.RO16TM.get(i + 1), x16L, y16L);
@@ -214,7 +214,7 @@ public class graphics extends JPanel {
 
         //Left side Round 8 Team Names
 
-        for (int i = 0, x8L = 10 + width * 3, y8L = 95; i < 4; i += 2) {
+        for (int i = 0, x8L = 10 + width * 3 + (width / 4), y8L = 95; i < 4; i += 2) {
             g.drawString(Main.RO8TM.get(i), x8L, y8L);
             y8L += 120 + 4 * space;
             g.drawString(Main.RO8TM.get(i + 1), x8L, y8L);
@@ -224,7 +224,7 @@ public class graphics extends JPanel {
         //Right side Round 8 Team Names
 
 
-        for (int i = 4, x8L = screen.width - (width * 4) - 10, y8L = 95; i < 8; i += 2) {
+        for (int i = 4, x8L = screen.width - (width * 4) - 10 + (width / 4), y8L = 95; i < 8; i += 2) {
             g.drawString(Main.RO8TM.get(i), x8L, y8L);
             y8L += 120 + 4 * space;
             g.drawString(Main.RO8TM.get(i + 1), x8L, y8L);
@@ -233,7 +233,7 @@ public class graphics extends JPanel {
 
         //Left side Round 4 Team Names
 
-        for (int i = 0, x4L = 10 + width * 4, y4L = 180; i < 2; i += 2) {
+        for (int i = 0, x4L = 10 + width * 4 + (width / 4), y4L = 180; i < 2; i += 2) {
             g.drawString(Main.RO4TM.get(i), x4L, y4L);
             y4L += 240 + 8 * space;
             g.drawString(Main.RO4TM.get(i + 1), x4L, y4L);
@@ -242,7 +242,7 @@ public class graphics extends JPanel {
 
         //Right side Round 4 Team Names
 
-        for (int i = 2, x4L = screen.width - (width * 5) - 10, y4L = 180; i < 4; i += 2) {
+        for (int i = 2, x4L = screen.width - (width * 5) - 10 + (width / 4), y4L = 180; i < 4; i += 2) {
             g.drawString(Main.RO4TM.get(i), x4L, y4L);
             y4L += 240 + 8 * space;
             g.drawString(Main.RO4TM.get(i + 1), x4L, y4L);
