@@ -34,7 +34,7 @@ public class ZTable {
         return ztable(z);
     }
     public static double sosp(double sos1, double sos2) throws FileNotFoundException {
-        double std = 0.044625872606139;
+        double std = 	0.068819377031316;
         double z = (sos2 - sos1) / std;
 
         return ztable(z);
