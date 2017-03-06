@@ -240,6 +240,7 @@ public class graphics extends JPanel {
             y4L += 240 + 8 * space;
         }
 
+
         //Right side Round 4 Team Names
 
         for (int i = 2, x4L = screen.width - (width * 5) - 10 + (width / 4), y4L = 180; i < 4; i += 2) {
@@ -283,10 +284,10 @@ public class graphics extends JPanel {
 
 
         g.setFont(new Font("Times New Roman", Font.BOLD, 35));
-        g.drawString("South", 500, 240);
-        g.drawString("West", 500, 700);
-        g.drawString("East", 1330, 210);
-        g.drawString("Midwest", 1300, 720);
+        g.drawString("South", (screen.width/4), 240) ;
+        g.drawString("West", (screen.width/4 ), 720);
+        g.drawString("East", (screen.width) - 600 , 240);
+        g.drawString("Midwest",(screen.width) -600 , 720);
         g.drawString("BRACKET PREDICTOR", Main.frame.getWidth() / 2 - 205, Main.frame.getHeight() / 9);
         g.drawString("WINNER", mid + 20, 255 + 12 * space + 20);
         g.setFont(new Font("Times New Roman", Font.ITALIC, 35));
