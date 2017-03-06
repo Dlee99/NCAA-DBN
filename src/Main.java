@@ -22,6 +22,7 @@ public class Main {
     public static ArrayList<String> FinalTM = new ArrayList<>();
     public static ArrayList<Double> FinalNUM = new ArrayList<>();
     public static ArrayList<Double> FinalSOS = new ArrayList<>();
+    public static ArrayList<Integer> rank = new ArrayList<>();
     public static String Winner;
     public static bracketFrame frame;
 
@@ -187,6 +188,7 @@ public class Main {
             tm.add(s[0]);
             wl.add(Double.parseDouble(s[1]));
             SOS.add(Double.parseDouble(s[2]));
+            rank.add(Integer.parseInt(s[3]));
 
         }
         for(int i = 0; i < tm.size(); i = i + 2) {
