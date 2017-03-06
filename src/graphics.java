@@ -284,10 +284,10 @@ public class graphics extends JPanel {
 
 
         g.setFont(new Font("Times New Roman", Font.BOLD, 35));
-        g.drawString("South", (screen.width/4), 240) ;
-        g.drawString("West", (screen.width/4 ), 720);
-        g.drawString("East", (screen.width) - 600 , 240);
-        g.drawString("Midwest",(screen.width) -600 , 720);
+        g.drawString("South", width * 3 + 10, 120 + (space * 4) ) ;
+        g.drawString("West", width * 3 + 10, 360 + (space * 12));
+        g.drawString("East", screen.width - 10 - (width * 4) + (width / 4) , 120 + (space * 4));
+        g.drawString("Midwest",screen.width - 10 - (width * 4) + (width / 4), 360 + (space * 12));
         g.drawString("BRACKET PREDICTOR", Main.frame.getWidth() / 2 - 205, Main.frame.getHeight() / 9);
         g.drawString("WINNER", mid + 20, 255 + 12 * space + 20);
         g.setFont(new Font("Times New Roman", Font.ITALIC, 35));
