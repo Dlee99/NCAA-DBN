@@ -1,64 +1,64 @@
-Kansas, .8823, 0.602
-Austin Peay, .5143, 0.484
-Colorado, .6667, 0.561
-Connecticut, .7058, 0.560
-Maryland, .7575 ,0.578
-SouthDakotaSt, .7878, 0.511
-California, .6969 , 0.581
-Hawaii, .7812 , 0.485
-Arizona, .7575, 0.544
-Wichita ST, .75 , 0.535
-Miami, .7812, 0.590
-Buffalo, .5882, 0.540
-Iowa, .6774, 0.571
-Temple, .6562, 0.544
-Villanova, .8529, 0.601
-UNC Asheville, .6667, 0.481
-Oregon, .8235, 0.597
-Holy Cross, .4242, 0.461
-SaintJoe's, .7941, 0.561
-Cincinnati, .6875, 0.547
-Baylor, .6667, 0.591
-Yale, .7857, 0.505
-Duke, .6969, 0.599
-UNC Wilmington, .7812, 0.513
-Texas, .625, 0.593
-Northern Iowa, .6470, 0.539
-Texas A&M, .7647, 0.560
-Green Bay, .6571, 0.487
-Oregon ST, .6129, 0.583
-VCU, .7058, 0.556
-Oklamhoma, .7812, 0.600
-CSU Bakersfield, .75, 0.452
-North Carolina, .8235, 0.591
-Florida Golf Coast, .6060, 0.466
-USC, .6363, 0.563
-Providence, .6969, 0.563
-Indiana, .7812, 0.552
-Chattanooga, .8529, 0.482
-Kentucky, .7647, 0.577
-Stony Brook, .8125, 0.487
-Notre Dame, .6562, 0.584
-Michigan, .6470, 0.559
-West Virginia, .7647, 0.584
-Stephen F Austin, .8437, 0.478
-Wisconsin, .625, 0.585
-Pittsburg, .6562, 0.572
-Xavier, .84375, 0.569
-Weber State, .7647, 0.457
-Virgina, .7878, 0.604
-Hapton, .6774, 0.442
-Texas Tech, .6129, 0.584
-Butler, .6774, 0.551
-Purdue, .7647, 0.567
-Little Rock, .8787, 0.483
-Iowa State, .6562, 0.592
-Iona, .6875, 0.501
-Seton Hall, .7575, 0.566
-Gonzaga, .7878, 0.533
-Utah, .7647, 0.590
-Fresno State, .7352, 0.518
-Dayton, .7812, 0.553
-Syracuse, .5937, 0.581
-Michigan State, .8529, 0.557
-Middle Tennessee, .7272, 0.510
+Kansas, .8823, 0.602,1
+Austin Peay, .5143, 0.484,16
+Colorado, .6667, 0.561,8
+Connecticut, .7058, 0.560,9
+Maryland, .7575 ,0.578,5
+SouthDakotaSt, .7878, 0.511,12
+California, .6969 , 0.581,4
+Hawaii, .7812 , 0.485,13
+Arizona, .7575, 0.544,6
+Wichita ST, .75 , 0.535,11
+Miami, .7812, 0.590,3
+Buffalo, .5882, 0.540,14
+Iowa, .6774, 0.571,7
+Temple, .6562, 0.544,10
+Villanova, .8529, 0.6012,2
+UNC Asheville, .6667, 0.481,15
+Oregon, .8235, 0.597,1
+Holy Cross, .4242, 0.461,16
+SaintJoe's, .7941, 0.561,8
+Cincinnati, .6875, 0.547,9
+Baylor, .6667, 0.591,5
+Yale, .7857, 0.505,12
+Duke, .6969, 0.599,4
+UNC Wilmington, .7812, 0.513,13
+Texas, .625, 0.593,6
+Northern Iowa, .6470, 0.539,11
+Texas A&M, .7647, 0.560,3
+Green Bay, .6571, 0.487,14
+Oregon ST, .6129, 0.583,7
+VCU, .7058, 0.556,10
+Oklamhoma, .7812, 0.600,2
+CSU Bakersfield, .75, 0.452,15
+North Carolina, .8235, 0.591,1
+Florida Golf Coast, .6060, 0.466,16
+USC, .6363, 0.563,8
+Providence, .6969, 0.563,9
+Indiana, .7812, 0.552,5
+Chattanooga, .8529, 0.482,12
+Kentucky, .7647, 0.577,4
+Stony Brook, .8125, 0.487,13
+Notre Dame, .6562, 0.584,6
+Michigan, .6470, 0.559,11
+West Virginia, .7647, 0.584,3
+Stephen F Austin, .8437, 0.478,14
+Wisconsin, .625, 0.585,7
+Pittsburg, .6562, 0.572,10
+Xavier, .84375, 0.569,2
+Weber State, .7647, 0.457,15
+Virgina, .7878, 0.604,1
+Hapton, .6774, 0.442,16
+Texas Tech, .6129, 0.584,8
+Butler, .6774, 0.551,9
+Purdue, .7647, 0.567,5
+Little Rock, .8787, 0.483,12
+Iowa State, .6562, 0.592,4
+Iona, .6875, 0.501,13
+Seton Hall, .7575, 0.566,6
+Gonzaga, .7878, 0.533,11
+Utah, .7647, 0.590,3
+Fresno State, .7352, 0.518,14
+Dayton, .7812, 0.553,5
+Syracuse, .5937, 0.581,12
+Michigan State, .8529, 0.557,2
+Middle Tennessee, .7272, 0.510,15
