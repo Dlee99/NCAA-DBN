@@ -22,7 +22,14 @@ public class Main {
     public static ArrayList<String> FinalTM = new ArrayList<>();
     public static ArrayList<Double> FinalNUM = new ArrayList<>();
     public static ArrayList<Double> FinalSOS = new ArrayList<>();
-    public static ArrayList<Integer> rank = new ArrayList<>();
+    public static ArrayList<Integer> rank64 = new ArrayList<>();
+    public static ArrayList<Integer> rank32 = new ArrayList<>();
+    public static ArrayList<Integer> rank16 = new ArrayList<>();
+    public static ArrayList<Integer> rank8 = new ArrayList<>();
+    public static ArrayList<Integer> rank4 = new ArrayList<>();
+    public static ArrayList<Integer> rank2 = new ArrayList<>();
+    public static ArrayList<Integer> rankWinner = new ArrayList<>();
+
     public static String Winner;
     public static bracketFrame frame;
 
@@ -38,7 +45,7 @@ public class Main {
             tm.add(s[0]);
             wl.add(Double.parseDouble(s[1]));
             SOS.add(Double.parseDouble(s[2]));
-            rank.add(Integer.parseInt(s[3]));
+            rank64.add(Integer.parseInt(s[3]));
 
 
         }
@@ -50,6 +57,8 @@ public class Main {
                 RO32TM.add(tm.get(i));
                 RO32NUM.add(wl.get(i));
                 RO32SOS.add(SOS.get(i));
+                rank32.add(rank64.get(i));
+
 
             } else {
 
@@ -57,6 +66,7 @@ public class Main {
                 RO32TM.add(tm.get(i + 1));
                 RO32NUM.add(wl.get(i + 1));
                 RO32SOS.add(SOS.get(i + 1));
+                rank32.add(rank64.get(i+1));
 
             }
 
@@ -76,12 +86,14 @@ public class Main {
                 RO16TM.add(RO32TM.get(i));
                 RO16NUM.add(RO32NUM.get(i));
                 RO16SOS.add(RO32SOS.get(i));
+                rank16.add(rank32.get(i));
 
             } else {
                 System.out.println(RO32TM.get(i + 1) + "\tWins!");
                 RO16TM.add(RO32TM.get(i + 1));
                 RO16NUM.add(RO32NUM.get(i + 1));
                 RO16SOS.add(RO32SOS.get(i + 1));
+                rank16.add(rank32.get(i+1));
 
             }
             System.out.println();
@@ -98,12 +110,13 @@ public class Main {
                 RO8TM.add(RO16TM.get(i));
                 RO8NUM.add(RO16NUM.get(i));
                 RO8SOS.add(RO16SOS.get(i));
+                rank8.add(rank16.get(i));
             } else {
                 System.out.println(RO16TM.get(i + 1) + "\tWins!");
                 RO8TM.add(RO16TM.get(i + 1));
                 RO8NUM.add(RO16NUM.get(i + 1));
                 RO8SOS.add(RO16SOS.get(i + 1));
-
+                rank8.add(rank16.get(i+1));
 
             }
             System.out.println();
@@ -122,12 +135,14 @@ public class Main {
                 RO4TM.add(RO8TM.get(i));
                 RO4NUM.add(RO8NUM.get(i));
                 RO4SOS.add(RO8SOS.get(i));
+                rank4.add(rank8.get(i));
 
             } else {
                 System.out.println(RO8TM.get(i + 1) + "\tWins!");
                 RO4TM.add(RO8TM.get(i + 1));
                 RO4NUM.add(RO8NUM.get(i + 1));
                 RO4SOS.add(RO8SOS.get(i + 1));
+                rank4.add(rank8.get(i+1));
 
 
             }
@@ -146,12 +161,14 @@ public class Main {
                 FinalTM.add(RO4TM.get(i));
                 FinalNUM.add(RO4NUM.get(i));
                 FinalSOS.add(RO4SOS.get(i));
+                rank2.add(rank4.get(i));
 
             } else {
                 System.out.println(RO4TM.get(i + 1) + "\tWins!");
                 FinalTM.add(RO4TM.get(i + 1));
                 FinalNUM.add(RO4NUM.get(i + 1));
                 FinalSOS.add(RO4SOS.get(i + 1));
+                rank2.add(rank4.get(i+1));
 
 
             }
@@ -167,11 +184,13 @@ public class Main {
             if (ZTable.averagep(ZTable.propp(FinalNUM.get(i), FinalNUM.get(i + 1)), ZTable.sosp(FinalSOS.get(i), FinalSOS.get(i + 1))) >= .5) {
                 System.out.println(FinalTM.get(i) + "\tWins!");
                 Winner = FinalTM.get(i);
+                rankWinner.add(rank64.get(i));
                 break;
 
             } else {
                 System.out.println(FinalTM.get(i + 1) + "\tWins!");
                 Winner = FinalTM.get(i);
+                rankWinner.add(rank64.get(i+1));
                 break;
 
 
