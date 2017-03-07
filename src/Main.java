@@ -29,7 +29,8 @@ public class Main {
     public static ArrayList<Integer> rank4 = new ArrayList<>();
     public static ArrayList<Integer> rank2 = new ArrayList<>();
     public static ArrayList<Integer> rankWinner = new ArrayList<>();
-
+    public static double wls = 2;
+    public static double soss = 1;
     public static String Winner;
     public static bracketFrame frame;
 
