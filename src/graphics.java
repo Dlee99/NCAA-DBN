@@ -3,7 +3,7 @@ import java.awt.*;
 
 public class graphics extends JPanel  {
     public void paintComponent(Graphics g) {
-        Color background = Color.DARK_GRAY;
+        Color background = new Color(164,204,180);
         Color text = Color.WHITE;
         super.paintComponent(g);
         this.setBackground(background);
