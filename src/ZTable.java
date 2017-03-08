@@ -31,7 +31,6 @@ public class ZTable {
     public static double propp(double t1, double t2) throws FileNotFoundException {
         double std1 = Math.sqrt(t1*(1-t1)), std2 = Math.sqrt(t2*(1-t2));
         double z = (t2-t1) / Math.sqrt(((Math.pow(std1, 2) + Math.pow(std2, 2))));
-        z = z / Main.wls;
         return ztable(z);
     }
     public static double sosp(double sos1, double sos2) throws FileNotFoundException {
