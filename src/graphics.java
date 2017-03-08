@@ -4,6 +4,7 @@ import java.awt.*;
 public class graphics extends JPanel  {
     public void paintComponent(Graphics g) {
         Color background = new Color(164,204,180);
+        background = Color.DARK_GRAY;
         Color text = Color.WHITE;
         super.paintComponent(g);
         this.setBackground(background);
@@ -152,7 +153,7 @@ public class graphics extends JPanel  {
 
         //Left side Round 64 Team Names
 
-        for (int i = 0, x64L = 10 + (width / 4), y64L = 10; i < 32; i += 2) {
+        for (int i = 0, x64L = 10 + (width / 4) - 20, y64L = 10; i < 32; i += 2) {
             g.drawString(Main.tm.get(i)+ (" ( ")+Main.rank64.get(i)+(" )"), x64L, y64L);
             y64L += 30;
             g.drawString(Main.tm.get(i + 1)+ (" ( ")+Main.rank64.get(i+1)+(" )"), x64L, y64L);
@@ -161,7 +162,7 @@ public class graphics extends JPanel  {
 
         //Right side Round 64 Team Names
 
-        for (int i = 32, x64R = screen.width - width - 10 + (width / 4), y64R = 10; i < 64; i += 2) {
+        for (int i = 32, x64R = screen.width - width - 10 + (width / 4) - 20, y64R = 10; i < 64; i += 2) {
             g.drawString(Main.tm.get(i)+ ("(")+Main.rank64.get(i)+(")"), x64R, y64R);
             y64R += 30;
             g.drawString(Main.tm.get(i + 1)+ ("(")+Main.rank64.get(i+1)+(")"), x64R, y64R);
