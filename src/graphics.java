@@ -4,8 +4,7 @@ import java.awt.*;
 public class graphics extends JPanel  {
     public void paintComponent(Graphics g) {
         Color background = new Color(164,204,180);
-        background = Color.DARK_GRAY;
-        Color text = Color.WHITE;
+        Color text = Color.blue;
         super.paintComponent(g);
         this.setBackground(background);
         g.setColor(Color.white);
