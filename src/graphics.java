@@ -3,8 +3,8 @@ import java.awt.*;
 
 public class graphics extends JPanel  {
     public void paintComponent(Graphics g) {
-        Color background = new Color(164,204,180);
-        Color text = Color.blue;
+        Color background = Color.WHITE;
+        Color text = Color.BLACK;
         super.paintComponent(g);
         this.setBackground(background);
         g.setColor(Color.white);
@@ -225,7 +225,7 @@ public class graphics extends JPanel  {
 
 
         for (int i = 4, x8L = screen.width - (width * 4) - 10 + (width / 4), y8L = 95; i < 8; i += 2) {
-            g.drawString(Main.RO8TM.get(i)+ ("(")+Main.rank8.get(i+1)+(")"), x8L, y8L);
+            g.drawString(Main.RO8TM.get(i)+ ("(")+Main.rank8.get(i)+(")"), x8L, y8L);
             y8L += 120 + 4 * space;
             g.drawString(Main.RO8TM.get(i + 1)+ ("(")+Main.rank8.get(i+1)+(")"), x8L, y8L);
             y8L += 120 + 4 * space;
