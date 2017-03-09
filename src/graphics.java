@@ -1,10 +1,12 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class graphics extends JPanel  {
     public void paintComponent(Graphics g) {
-        Color background = Color.WHITE;
-        Color text = Color.BLACK;
+        Color background = Color.DARK_GRAY;
+        Color text = Color.WHITE;
         super.paintComponent(g);
         this.setBackground(background);
         g.setColor(Color.white);
@@ -325,6 +327,33 @@ public class graphics extends JPanel  {
         g.drawString("Derek, Bubb, Nirali", Main.frame.getWidth() / 2 - 145, Main.frame.getHeight() / 2 + 300);
         g.drawString("a.k.a Bracketology Experts", Main.frame.getWidth() / 2 - 180,Main.frame.getHeight() / 2 + 350);
         g.finalize();
+
+        JButton button = new JButton();
+        button.setSize(110,30);
+        button.setLocation( Main.frame.getWidth() / 2 - 50,Main.frame.getHeight() / 2 + 150);
+        button.setVisible(true);
+        button.enableInputMethods(true);
+        button.setText("Color Key");
+        Main.frame.add(button);
+        button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (e.getSource()==button){
+                    JFrame newf = new JFrame("Color Key:");
+                    newf.setSize(500,200);
+                    newf.setLocationRelativeTo(null);
+                    newf.setVisible(true);
+                    JLabel label = new JLabel();
+
+                    label.setFont(new Font("Consolas", Font.BOLD, 22));
+                    label.setText("<html>% Chance each team will win:      <BR>          Red: 55% >      <BR>       Yellow: 75% >       <BR>      Green: > 75%      </html>");
+                    newf.add(label);
+
+                }
+            }
+        });
+
+
 
     }
 
