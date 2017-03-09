@@ -11,6 +11,7 @@ public class graphics extends JPanel  {
         Dimension screen = Toolkit.getDefaultToolkit().getScreenSize();
         int space = (screen.height - (30 * 16)) / 20;
         int width = (screen.width - 20) / 12;
+
         //Left side Round 64 Bracket Lines
         g.setColor(text);
         int y1 = 10, y2 = 10;
