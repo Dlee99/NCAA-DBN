@@ -17,7 +17,9 @@ public class graphics extends JPanel  {
         for (int i = 0, x1 = 10, x2 = x1 + width; i < 16; i++) {
             g.drawLine(x1, y1, x2, y2);
             y1 += 30;
+            g.setColor(Main.RO64Color.get(i));
             g.drawLine(x2, y1, x2, y2);
+            g.setColor(text);
             y2 += 30;
             g.drawLine(x1, y1, x2, y2);
             y1 += space;
@@ -31,7 +33,9 @@ public class graphics extends JPanel  {
         for (int i = 0, x1 = screen.width - 10, x2 = x1 - width; i < 16; i++) {
             g.drawLine(x1, y1, x2, y2);
             y1 += 30;
+            g.setColor(Main.RO64Color.get(i + 16));
             g.drawLine(x2, y1, x2, y2);
+            g.setColor(text);
             y2 += 30;
             g.drawLine(x1, y1, x2, y2);
             y1 += space;
@@ -45,7 +49,9 @@ public class graphics extends JPanel  {
         for (int i = 0, x1 = 10 + width, x2 = x1 + width; i < 8; i++) {
             g.drawLine(x1, y1, x2, y2);
             y1 += 30 + space;
+            g.setColor(Main.RO32Color.get(i));
             g.drawLine(x2, y1, x2, y2);
+            g.setColor(text);
             y2 += 30 + space;
             g.drawLine(x1, y1, x2, y2);
             y1 += 30 + space;
@@ -59,7 +65,9 @@ public class graphics extends JPanel  {
         for (int i = 0, x1 = screen.width - width - 10, x2 = x1 - width; i < 8; i++) {
             g.drawLine(x1, y1, x2, y2);
             y1 += 30 + space;
+            g.setColor(Main.RO32Color.get(i + 8));
             g.drawLine(x2, y1, x2, y2);
+            g.setColor(text);
             y2 += 30 + space;
             g.drawLine(x1, y1, x2, y2);
             y1 += 30 + space;
@@ -73,7 +81,9 @@ public class graphics extends JPanel  {
         for (int i = 0, x1 = 10 + 2 * width, x2 = x1 + width; i < 4; i++) {
             g.drawLine(x1, y1, x2, y2);
             y1 += 60 + 2 * space;
+            g.setColor(Main.RO16Color.get(i));
             g.drawLine(x2, y1, x2, y2);
+            g.setColor(text);
             y2 += 60 + 2 * space;
             g.drawLine(x1, y1, x2, y2);
             y1 += 60 + 2 * space;
@@ -87,7 +97,9 @@ public class graphics extends JPanel  {
         for (int i = 0, x1 = screen.width - (width * 2) - 10, x2 = x1 - width; i < 4; i++) {
             g.drawLine(x1, y1, x2, y2);
             y1 += 60 + 2 * space;
+            g.setColor(Main.RO16Color.get(i + 4));
             g.drawLine(x2, y1, x2, y2);
+            g.setColor(text);
             y2 += 60 + 2 * space;
             g.drawLine(x1, y1, x2, y2);
             y1 += 60 + 2 * space;
@@ -101,7 +113,9 @@ public class graphics extends JPanel  {
         for (int i = 0, x1 = 10 + 3 * width, x2 = x1 + width; i < 2; i++) {
             g.drawLine(x1, y1, x2, y2);
             y1 += 120 + 4 * space;
+            g.setColor(Main.RO8Color.get(i));
             g.drawLine(x2, y1, x2, y2);
+            g.setColor(text);
             y2 += 120 + 4 * space;
             g.drawLine(x1, y1, x2, y2);
             y1 += 120 + 4 * space;
@@ -115,7 +129,9 @@ public class graphics extends JPanel  {
         for (int i = 0, x1 = screen.width - (width * 3) - 10, x2 = x1 - width; i < 2; i++) {
             g.drawLine(x1, y1, x2, y2);
             y1 += 120 + 4 * space;
+            g.setColor(Main.RO8Color.get(i + 2));
             g.drawLine(x2, y1, x2, y2);
+            g.setColor(text);
             y2 += 120 + 4 * space;
             g.drawLine(x1, y1, x2, y2);
             y1 += 120 + 4 * space;
@@ -126,11 +142,13 @@ public class graphics extends JPanel  {
 
         y1 = 180;
         y2 = 180;
-        for (int i = 0, x1 = 10 + 4 * width, x2 = x1 + width; i < 2; i++) {
+        for (int i = 0, x1 = 10 + 4 * width, x2 = x1 + width; i < 1; i++) {
             g.drawLine(x1, y1, x2, y2);
             y1 += 240 + 8 * space;
+            g.setColor(Main.RO4Color.get(i));
             g.drawLine(x2, y1, x2, y2);
             y2 += 240 + 8 * space;
+            g.setColor(text);
             g.drawLine(x1, y1, x2, y2);
             y1 += 240 + 8 * space;
             y2 += 240 + 8 * space;
@@ -140,10 +158,12 @@ public class graphics extends JPanel  {
 
         y1 = 180;
         y2 = 180;
-        for (int i = 0, x1 = screen.width - (width * 4) - 10, x2 = x1 - width; i < 2; i++) {
+        for (int i = 0, x1 = screen.width - (width * 4) - 10, x2 = x1 - width; i < 1; i++) {
             g.drawLine(x1, y1, x2, y2);
             y1 += 240 + 8 * space;
+            g.setColor(Main.RO4Color.get(i + 1));
             g.drawLine(x2, y1, x2, y2);
+            g.setColor(text);
             y2 += 240 + 8 * space;
             g.drawLine(x1, y1, x2, y2);
             y1 += 240 + 8 * space;
