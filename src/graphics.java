@@ -159,6 +159,7 @@ public class graphics extends JPanel  {
 
         y1 = 180;
         y2 = 180;
+
         for (int i = 0, x1 = screen.width - (width * 4) - 10, x2 = x1 - width; i < 1; i++) {
             g.drawLine(x1, y1, x2, y2);
             y1 += 240 + 8 * space;
@@ -171,6 +172,15 @@ public class graphics extends JPanel  {
             y2 += 240 + 8 * space;
         }
 
+        //Championship Bracket Lines
+
+        g.setColor(Main.FinalColor.get(0));
+        g.drawLine(screen.width - (width * 7) - 120 + 100, 240 + 8 * space / 2 + 25, screen.width - (width * 4) - 10 - width - 100 + 100, 240 + 8 * space / 2 + 25);
+        g.drawLine((screen.width - (width * 7) - 120 + 100 + screen.width - (width * 4) - 10 - width - 100 + 100) / 2,
+                240 + 8 * space / 2 + 25,
+                (screen.width - (width * 7) - 120 + 100 + screen.width - (width * 4) - 10 - width - 100 + 100) / 2,
+                240 + 8 * space);
+        g.setColor(text);
         //Left side Round 64 Team Names
 
         for (int i = 0, x64L = 10 + (width / 4) - 20, y64L = 10; i < 32; i += 2) {

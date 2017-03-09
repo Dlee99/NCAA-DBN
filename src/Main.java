@@ -80,7 +80,7 @@ public class Main {
             }
             if(ZTable.propp(Corrected1, Corrected2) > .45 && ZTable.propp(Corrected1, Corrected2) < .55)
                 RO64Color.add(Color.RED);
-            else if (ZTable.propp(Corrected1, Corrected2) > .35 && ZTable.propp(Corrected1, Corrected2) < .65)
+            else if (ZTable.propp(Corrected1, Corrected2) > .25 && ZTable.propp(Corrected1, Corrected2) < .75)
                 RO64Color.add(Color.ORANGE);
             else
                 RO64Color.add(Color.GREEN);
@@ -113,7 +113,7 @@ public class Main {
             }
             if(ZTable.propp(Corrected1, Corrected2) > .45 && ZTable.propp(Corrected1, Corrected2) < .55)
                 RO32Color.add(Color.RED);
-            else if (ZTable.propp(Corrected1, Corrected2) > .35 && ZTable.propp(Corrected1, Corrected2) < .65)
+            else if (ZTable.propp(Corrected1, Corrected2) > .25 && ZTable.propp(Corrected1, Corrected2) < .75)
                 RO32Color.add(Color.ORANGE);
             else
                 RO32Color.add(Color.GREEN);
@@ -143,7 +143,7 @@ public class Main {
             }
             if(ZTable.propp(Corrected1, Corrected2) > .45 && ZTable.propp(Corrected1, Corrected2) < .55)
                 RO16Color.add(Color.RED);
-            else if (ZTable.propp(Corrected1, Corrected2) > .35 && ZTable.propp(Corrected1, Corrected2) < .65)
+            else if (ZTable.propp(Corrected1, Corrected2) > .25 && ZTable.propp(Corrected1, Corrected2) < .75)
                 RO16Color.add(Color.ORANGE);
             else
                 RO16Color.add(Color.GREEN);
@@ -176,7 +176,7 @@ public class Main {
             }
             if(ZTable.propp(Corrected1, Corrected2) > .45 && ZTable.propp(Corrected1, Corrected2) < .55)
                 RO8Color.add(Color.RED);
-            else if (ZTable.propp(Corrected1, Corrected2) > .35 && ZTable.propp(Corrected1, Corrected2) < .65)
+            else if (ZTable.propp(Corrected1, Corrected2) > .25 && ZTable.propp(Corrected1, Corrected2) < .75)
                 RO8Color.add(Color.ORANGE);
             else
                 RO8Color.add(Color.GREEN);
@@ -208,7 +208,7 @@ public class Main {
             }
             if(ZTable.propp(Corrected1, Corrected2) > .45 && ZTable.propp(Corrected1, Corrected2) < .55)
                 RO4Color.add(Color.RED);
-            else if (ZTable.propp(Corrected1, Corrected2) > .35 && ZTable.propp(Corrected1, Corrected2) < .65)
+            else if (ZTable.propp(Corrected1, Corrected2) > .25 && ZTable.propp(Corrected1, Corrected2) < .75)
                 RO4Color.add(Color.ORANGE);
             else
                 RO4Color.add(Color.GREEN);
@@ -233,7 +233,7 @@ public class Main {
             }
             if(ZTable.propp(Corrected1, Corrected2) > .45 && ZTable.propp(Corrected1, Corrected2) < .55)
                 FinalColor.add(Color.RED);
-            else if (ZTable.propp(Corrected1, Corrected2) > .35 && ZTable.propp(Corrected1, Corrected2) < .65)
+            else if (ZTable.propp(Corrected1, Corrected2) > .25 && ZTable.propp(Corrected1, Corrected2) < .75)
                 FinalColor.add(Color.ORANGE);
             else
                 FinalColor.add(Color.GREEN);
