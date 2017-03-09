@@ -29,6 +29,11 @@ public class Main {
     public static ArrayList<Integer> rank4 = new ArrayList<>();
     public static ArrayList<Integer> rank2 = new ArrayList<>();
     public static ArrayList<Integer> rankWinner = new ArrayList<>();
+    public static ArrayList<Color> RO32Color = new ArrayList<>();
+    public static ArrayList<Color> RO16Color = new ArrayList<>();
+    public static ArrayList<Color> RO8Color = new ArrayList<>();
+    public static ArrayList<Color> RO4Color = new ArrayList<>();
+    public static ArrayList<Color> FinalColor = new ArrayList<>();
     public static double wls = 3;
     public static double soss = 1.5;
     public static String Winner;
@@ -59,6 +64,7 @@ public class Main {
                 RO32NUM.add(wl.get(i));
                 RO32SOS.add(SOS.get(i));
                 rank32.add(rank64.get(i));
+          
 
 
             } else {
@@ -70,6 +76,10 @@ public class Main {
                 rank32.add(rank64.get(i+1));
 
             }
+            if(ZTable.propp(Corrected1, Corrected2) > .4 && ZTable.propp(Corrected1, Corrected2) < .6)
+                RO32Color.add(Color.ORANGE);
+            else
+                RO32Color.add(Color.GREEN);
 
             System.out.println();
 
@@ -97,6 +107,11 @@ public class Main {
                 rank16.add(rank32.get(i+1));
 
             }
+            if(ZTable.propp(Corrected1, Corrected2) > .4 && ZTable.propp(Corrected1, Corrected2) < .6)
+                RO16Color.add(Color.ORANGE);
+            else
+                RO16Color.add(Color.GREEN);
+           
             System.out.println();
 
         }
@@ -120,6 +135,10 @@ public class Main {
                 rank8.add(rank16.get(i+1));
 
             }
+            if(ZTable.propp(Corrected1, Corrected2) > .4 && ZTable.propp(Corrected1, Corrected2) < .6)
+                RO8Color.add(Color.ORANGE);
+            else
+                RO8Color.add(Color.GREEN);
             System.out.println();
 
         }
@@ -147,6 +166,10 @@ public class Main {
 
 
             }
+            if(ZTable.propp(Corrected1, Corrected2) > .4 && ZTable.propp(Corrected1, Corrected2) < .6)
+                RO4Color.add(Color.ORANGE);
+            else
+                RO4Color.add(Color.GREEN);
             System.out.println();
 
         }
@@ -173,6 +196,10 @@ public class Main {
 
 
             }
+            if(ZTable.propp(Corrected1, Corrected2) > .4 && ZTable.propp(Corrected1, Corrected2) < .6)
+                FinalColor.add(Color.ORANGE);
+            else
+                FinalColor.add(Color.GREEN);
             System.out.println();
 
         }
