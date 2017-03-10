@@ -30,8 +30,8 @@ public class ZTable {
     }
     public static double propp(double t1, double t2) throws FileNotFoundException {
         double std1 = Math.sqrt(t1*(1-t1)), std2 = Math.sqrt(t2*(1-t2));
-        double z1 = (t1 - 0.39453853796875) / 0.059330998886279;
-        double z2 = (t2 - 0.39453853796875)  / 0.059330998886279;
+        double z1 = (t1 - 0.45204196477419) / 0.10838898449034;
+        double z2 = (t2 - 0.45204196477419)  / 0.10838898449034;
         return ztable( ztable(z1) - ztable(z2));
         /*double z = (t2-t1) / Math.sqrt(((Math.pow(std1, 2) + Math.pow(std2, 2))));
         z = (t2 - t1) / 0.059330998886279;

@@ -246,7 +246,7 @@ public class Main {
         frame = new bracketFrame();
     }
     public static double right() throws FileNotFoundException {
-        Scanner right = new Scanner(new File("2015R.txt"));
+        Scanner right = new Scanner(new File("2015right"));
         double sum = 0;
         for (int i = 0; i < RO32TM.size(); i++) {
             if (right.nextLine().equals(RO32TM.get(i))) {
