@@ -4,13 +4,22 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class graphics extends JPanel  {
+    JTextField FinalLeft = new JTextField(), FinalRight = new JTextField(), winner = new  JTextField();
+    JButton button = new JButton();
     public void paintComponent(Graphics g) {
+        if(FinalLeft.isVisible()){
+            Main.frame.remove(FinalLeft);
+            Main.frame.remove(FinalRight);
+            Main.frame.remove(winner);
+            Main.frame.remove(button);
+            repaint();
+        }
         Color background = Color.DARK_GRAY;
         Color text = Color.WHITE;
         super.paintComponent(g);
         this.setBackground(background);
         g.setColor(Color.white);
-        Dimension screen = Toolkit.getDefaultToolkit().getScreenSize();
+        Dimension screen = Main.frame.getSize();
         int space = (screen.height - (30 * 16)) / 20;
         int width = (screen.width - 20) / 12;
 
@@ -284,7 +293,8 @@ public class graphics extends JPanel  {
         }
 
         int mid = ((screen.width - (width * 7) - 120) + (screen.width - (width * 4) - 10 - width - 100)) / 2;
-        JTextField FinalLeft = new JTextField();
+        FinalLeft = new JTextField();
+        FinalLeft.setVisible(true);
         FinalLeft.setBackground(background);
         FinalLeft.setSize(200, 50);
         FinalLeft.setLocation(screen.width - (width * 7) - 120, 240 + 8 * space / 2);
@@ -294,7 +304,8 @@ public class graphics extends JPanel  {
         FinalLeft.setForeground(text);
 
 
-        JTextField FinalRight = new JTextField();
+        FinalRight = new JTextField();
+        FinalRight.setVisible(true);
         FinalRight.setBackground(background);
         FinalRight.setSize(200, 50);
         FinalRight.setLocation(screen.width - (width * 4) - 10 - width - 100, 240 + 8 * space / 2);
@@ -304,9 +315,9 @@ public class graphics extends JPanel  {
         FinalRight.setForeground(text);
 
 
-        JTextField winner = new JTextField();
+        winner = new JTextField();
         winner.setBackground(background);
-
+        winner.setVisible(true);
         winner.setSize(200, 50);
         winner.setLocation(mid, 240 + 8 * space);
         winner.setText(Main.FinalTM.get(0));
@@ -328,7 +339,7 @@ public class graphics extends JPanel  {
         g.drawString("a.k.a Bracketology Experts", Main.frame.getWidth() / 2 - 180,Main.frame.getHeight() / 2 + 350);
         g.finalize();
 
-        JButton button = new JButton();
+        button = new JButton();
         button.setSize(110,30);
         button.setLocation( Main.frame.getWidth() / 2 - 50,Main.frame.getHeight() / 2 + 150);
         button.setVisible(true);
@@ -352,6 +363,8 @@ public class graphics extends JPanel  {
                 }
             }
         });
+
+
 
 
 
