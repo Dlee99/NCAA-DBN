@@ -12,7 +12,6 @@ public class graphics extends JPanel  {
             Main.frame.remove(FinalRight);
             Main.frame.remove(winner);
             Main.frame.remove(button);
-            repaint();
         }
         Color background = Color.DARK_GRAY;
         Color text = Color.WHITE;
