@@ -2,6 +2,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class graphics extends JPanel  {
     JTextField FinalLeft = new JTextField(), FinalRight = new JTextField(), winner = new  JTextField();
@@ -345,10 +347,10 @@ public class graphics extends JPanel  {
         button.enableInputMethods(true);
         button.setText("Color Key");
         Main.frame.add(button);
-        button.addActionListener(new ActionListener() {
+        button.addMouseListener(new MouseAdapter() {
             @Override
-            public void actionPerformed(ActionEvent e) {
-                if (e.getSource()==button){
+            public void mousePressed(MouseEvent e) {
+                if(e.getButton() == MouseEvent.BUTTON1) {
                     JFrame newf = new JFrame("Color Key:");
                     newf.setSize(500,200);
                     newf.setLocationRelativeTo(null);
@@ -358,7 +360,6 @@ public class graphics extends JPanel  {
                     label.setFont(new Font("Consolas", Font.BOLD, 22));
                     label.setText("<html>% Chance each team will win:      <BR>          Red: 55% >      <BR>       Yellow: 75% >       <BR>      Green: > 75%      </html>");
                     newf.add(label);
-
                 }
             }
         });
