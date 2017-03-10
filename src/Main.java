@@ -36,13 +36,15 @@ public class Main {
     public static ArrayList<Color> RO8Color = new ArrayList<>();
     public static ArrayList<Color> RO4Color = new ArrayList<>();
     public static ArrayList<Color> FinalColor = new ArrayList<>();
+    public static ArrayList<Double> offense = new ArrayList<>();
+    public static ArrayList<Double> deffense = new ArrayList<>();
     public static double wls = 3;
     public static double soss = 1.5;
     public static String Winner;
     public static bracketFrame frame;
 
     public static void main(String[] args) throws IOException {
-        Scanner test = new Scanner(new File("teams.txt"));
+        Scanner test = new Scanner(new File("2015"));
         //Scanner test = new Scanner(new File("2015"));
         System.out.println("ROUND OF 64");
         System.out.println();
@@ -54,11 +56,13 @@ public class Main {
             wl.add(Double.parseDouble(s[1]));
             SOS.add(Double.parseDouble(s[2]));
             rank64.add(Integer.parseInt(s[3]));
+            offense.add(Double.parseDouble(s[4]));
+            deffense.add(Double.parseDouble(s[5]));
 
 
         }
         for (int i = 0; i < tm.size(); i = i + 2) {
-            double Corrected1 = wl.get(i) * SOS.get(i), Corrected2 = wl.get(i + 1) * SOS.get(i + 1);
+            double Corrected1 = (wl.get(i) * SOS.get(i)*offense.get(i))/deffense.get(i), Corrected2 = (wl.get(i + 1) * SOS.get(i + 1)*offense.get(i+1))/deffense.get(i+1);
             System.out.println(tm.get(i) + "\t" + tm.get(i + 1) + ":\t" + ZTable.propp(Corrected1, Corrected2));
             if (ZTable.propp(Corrected1, Corrected2) >= .5) {
                 System.out.println(tm.get(i) + "\tWins!");
@@ -81,7 +85,7 @@ public class Main {
             if(ZTable.propp(Corrected1, Corrected2) > .45 && ZTable.propp(Corrected1, Corrected2) < .55)
                 RO64Color.add(Color.RED);
             else if (ZTable.propp(Corrected1, Corrected2) > .25 && ZTable.propp(Corrected1, Corrected2) < .75)
-                RO64Color.add(Color.ORANGE);
+                RO64Color.add(Color.YELLOW);
             else
                 RO64Color.add(Color.GREEN);
 
@@ -238,12 +242,11 @@ public class Main {
             else
                 FinalColor.add(Color.GREEN);
 
-        }
-        System.out.println(right());
+        }System.out.println(right());
         frame = new bracketFrame();
     }
     public static double right() throws FileNotFoundException {
-        Scanner right = new Scanner(new File("Right.txt"));
+        Scanner right = new Scanner(new File("2015R.txt"));
         double sum = 0;
         for (int i = 0; i < RO32TM.size(); i++) {
             if (right.nextLine().equals(RO32TM.get(i))) {
