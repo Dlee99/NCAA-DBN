@@ -60,7 +60,7 @@ public class Main {
     public static bracketFrame frame;
 
     public static void main(String[] args) throws IOException {
-        Scanner test = new Scanner(new File("2017TEAMS"));
+        Scanner test = new Scanner(new File("teams.txt"));
         //Scanner test = new Scanner(new File("2015"));
         System.out.println("ROUND OF 64");
         System.out.println();
@@ -74,14 +74,14 @@ public class Main {
             rank64.add(Integer.parseInt(s[3]));
             offense.add(Double.parseDouble(s[4]));
             deffense.add(Double.parseDouble(s[5]));
-//            freeThrows.add(Double.parseDouble(s[6]));
+            freeThrows.add(Double.parseDouble(s[6]));
 
 
         }
         for (int i = 0; i < tm.size(); i = i + 2) {
             double Corrected1 = ((wl.get(i) * SOS.get(i)*offense.get(i))/deffense.get(i)), Corrected2 = (wl.get(i + 1) * SOS.get(i + 1)*offense.get(i+1))/deffense.get(i+1);
             System.out.println(tm.get(i) + "\t" + tm.get(i + 1) + ":\t" + ZTable.propp(Corrected1, Corrected2));
-            if (ZTable.propp(Corrected1, Corrected2) >= .5) {
+            if (ZTable.propp(Corrected1, Corrected2) >= .52) {
                 System.out.println(tm.get(i) + "\tWins!");
                 RO32TM.add(tm.get(i));
                 RO32NUM.add(wl.get(i));
@@ -92,7 +92,7 @@ public class Main {
 
 
 
-            } else {
+            } else if (ZTable.propp(Corrected1, Corrected2) <= .48){
 
                 System.out.println(tm.get(i + 1) + "\tWins!");
                 RO32TM.add(tm.get(i + 1));
@@ -102,6 +102,26 @@ public class Main {
                 offense32.add(offense.get(i+1));
                 deffense32.add(deffense.get(i+1));
 
+            }
+            else{
+                if(freeThrows.get(i) > freeThrows.get(i + 1)){
+                    System.out.println(tm.get(i) + "\tWins!");
+                    RO32TM.add(tm.get(i));
+                    RO32NUM.add(wl.get(i));
+                    RO32SOS.add(SOS.get(i));
+                    rank32.add(rank64.get(i));
+                    offense32.add(offense.get(i));
+                    deffense32.add(deffense.get(i));
+                }
+                else{
+                    System.out.println(tm.get(i + 1) + "\tWins!");
+                    RO32TM.add(tm.get(i + 1));
+                    RO32NUM.add(wl.get(i + 1));
+                    RO32SOS.add(SOS.get(i + 1));
+                    rank32.add(rank64.get(i+1));
+                    offense32.add(offense.get(i+1));
+                    deffense32.add(deffense.get(i+1));
+                }
             }
             if(ZTable.propp(Corrected1, Corrected2) > .45 && ZTable.propp(Corrected1, Corrected2) < .55)
                 RO64Color.add(Color.RED);
@@ -121,7 +141,7 @@ public class Main {
             double Corrected1 =(( RO32NUM.get(i) * RO32SOS.get(i)*offense32.get(i))/deffense32.get(i)), Corrected2 = (( RO32NUM.get(i+1) * RO32SOS.get(i+1)*offense32.get(i+1))/deffense32.get(i+1));
             System.out.println(RO32TM.get(i) + "\t" + RO32TM.get(i + 1) + ":\t" + ZTable.propp(Corrected1, Corrected2));
 
-            if (ZTable.propp(Corrected1, Corrected2) >= .5) {
+            if (ZTable.propp(Corrected1, Corrected2) >= .52) {
                 System.out.println(RO32TM.get(i) + "\tWins!");
                 RO16TM.add(RO32TM.get(i));
                 RO16NUM.add(RO32NUM.get(i));
@@ -131,7 +151,7 @@ public class Main {
                 deffense16.add(deffense32.get(i));
 
 
-            } else {
+            } else if (ZTable.propp(Corrected1, Corrected2) <= .48){
                 System.out.println(RO32TM.get(i + 1) + "\tWins!");
                 RO16TM.add(RO32TM.get(i + 1));
                 RO16NUM.add(RO32NUM.get(i + 1));
@@ -157,7 +177,7 @@ public class Main {
         for (int i = 0; i < RO16TM.size(); i = i + 2) {
             double Corrected1 = ((RO16NUM.get(i) * RO16SOS.get(i)*offense16.get(i))/deffense16.get(i)), Corrected2 = ((RO16NUM.get(i+1) * RO16SOS.get(i+1)*offense16.get(i+1))/deffense16.get(i+1));
             System.out.println(RO16TM.get(i) + "\t" + RO16TM.get(i + 1) + ":\t" + ZTable.propp(Corrected1, Corrected2));
-            if (ZTable.propp(Corrected1, Corrected2) >= .5) {
+            if (ZTable.propp(Corrected1, Corrected2) >= .52) {
                 System.out.println(RO16TM.get(i) + "\tWins!");
                 RO8TM.add(RO16TM.get(i));
                 RO8NUM.add(RO16NUM.get(i));
@@ -193,7 +213,7 @@ public class Main {
             double Corrected1 = ((RO8NUM.get(i) * RO8SOS.get(i)*offense8.get(i))/deffense8.get(i)), Corrected2 = ((RO8NUM.get(i+1) * RO8SOS.get(i+1)*offense8.get(i+1))/deffense8.get(i+1));
 
             System.out.println(RO8TM.get(i) + "\t" + RO8TM.get(i + 1) + ":\t" + ZTable.propp(Corrected1, Corrected2));
-            if (ZTable.propp(Corrected1, Corrected2) >= .5) {
+            if (ZTable.propp(Corrected1, Corrected2) >= .52) {
                 System.out.println(RO8TM.get(i) + "\tWins!");
                 RO4TM.add(RO8TM.get(i));
                 RO4NUM.add(RO8NUM.get(i));
@@ -230,7 +250,7 @@ public class Main {
         for (int i = 0; i < RO4TM.size(); i = i + 2) {
             double Corrected1 = ((RO4NUM.get(i) * RO4SOS.get(i)*offense4.get(i))/deffense4.get(i)), Corrected2 =((RO4NUM.get(i+1) * RO4SOS.get(i+1)*offense4.get(i+1))/deffense4.get(i+1));
             System.out.println(RO4TM.get(i) + "\t" + RO4TM.get(i + 1) + ":\t" + ZTable.propp(Corrected1, Corrected2));
-            if (ZTable.propp(Corrected1, Corrected2) >= .5) {
+            if (ZTable.propp(Corrected1, Corrected2) >= .52) {
                 System.out.println(RO4TM.get(i) + "\tWins!");
                 FinalTM.add(RO4TM.get(i));
                 FinalNUM.add(RO4NUM.get(i));
@@ -267,7 +287,7 @@ public class Main {
         for (int i = 0; i < FinalTM.size(); i = i + 2) {
             double Corrected1 = ((FinalNUM.get(i) * FinalSOS.get(i)*offense2.get(i))/deffense2.get(i)), Corrected2 = ((FinalNUM.get(i+1) * FinalSOS.get(i+1)*offense2.get(i+1))/deffense2.get(i+1));
             System.out.println(FinalTM.get(i) + "\t" + FinalTM.get(i + 1) + ":\t" + ZTable.propp(Corrected1, Corrected2));
-            if (ZTable.propp(Corrected1, Corrected2) >= .5) {
+            if (ZTable.propp(Corrected1, Corrected2) >= .52) {
                 System.out.println(FinalTM.get(i) + "\tWins!");
                 Winner = FinalTM.get(i);
                 rankWinner.add(rank64.get(i));
@@ -288,7 +308,7 @@ public class Main {
         frame = new bracketFrame();
     }
     public static double right() throws FileNotFoundException {
-        Scanner right = new Scanner(new File("2015Right"));
+        Scanner right = new Scanner(new File("Right.txt"));
         double sum = 0;
         for (int i = 0; i < RO32TM.size(); i++) {
             if (right.nextLine().equals(RO32TM.get(i))) {
