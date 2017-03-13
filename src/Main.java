@@ -38,18 +38,22 @@ public class Main {
     public static ArrayList<Color> FinalColor = new ArrayList<>();
     public static ArrayList<Double> offense = new ArrayList<>();
     public static ArrayList<Double> deffense = new ArrayList<>();
+    public static ArrayList<Double> offense32 = new ArrayList<>();
+    public static ArrayList<Double> deffense32 = new ArrayList<>();
+    public static ArrayList<Double> offense16 = new ArrayList<>();
+    public static ArrayList<Double> deffense16 = new ArrayList<>();
+    public static ArrayList<Double> offense8 = new ArrayList<>();
+    public static ArrayList<Double> deffense8 = new ArrayList<>();
+    public static ArrayList<Double> offense4 = new ArrayList<>();
+    public static ArrayList<Double> deffense4 = new ArrayList<>();
+    public static ArrayList<Double> offense2 = new ArrayList<>();
+    public static ArrayList<Double> deffense2 = new ArrayList<>();
     public static ArrayList<Double> freeThrows = new ArrayList<>();
     public static ArrayList<Double> freeThrows32 = new ArrayList<>();
     public static ArrayList<Double> freeThrows16 = new ArrayList<>();
     public static ArrayList<Double> freeThrows8 = new ArrayList<>();
     public static ArrayList<Double> freeThrows4 = new ArrayList<>();
     public static ArrayList<Double> freeThrows2 = new ArrayList<>();
-    public static ArrayList<Double> RO64C = new ArrayList<>();
-    public static ArrayList<Double> RO32C = new ArrayList<>();
-    public static ArrayList<Double> RO16C = new ArrayList<>();
-    public static ArrayList<Double> RO8C = new ArrayList<>();
-    public static ArrayList<Double> RO4C = new ArrayList<>();
-    public static ArrayList<Double> FinalC = new ArrayList<>();
     public static double wls = 3;
     public static double soss = 1.5;
     public static String Winner;
@@ -71,11 +75,11 @@ public class Main {
             offense.add(Double.parseDouble(s[4]));
             deffense.add(Double.parseDouble(s[5]));
             freeThrows.add(Double.parseDouble(s[6]));
-            RO64C.add(Double.parseDouble(s[1]) * Double.parseDouble(s[2]) * Double.parseDouble(s[4]) / Double.parseDouble(s[5]));
+
 
         }
         for (int i = 0; i < tm.size(); i = i + 2) {
-            double Corrected1 = (wl.get(i) * SOS.get(i)*offense.get(i))/deffense.get(i), Corrected2 = (wl.get(i + 1) * SOS.get(i + 1)*offense.get(i+1))/deffense.get(i+1);
+            double Corrected1 = ((wl.get(i) * SOS.get(i)*offense.get(i))/deffense.get(i)), Corrected2 = (wl.get(i + 1) * SOS.get(i + 1)*offense.get(i+1))/deffense.get(i+1);
             System.out.println(tm.get(i) + "\t" + tm.get(i + 1) + ":\t" + ZTable.propp(Corrected1, Corrected2));
             if (ZTable.propp(Corrected1, Corrected2) >= .5) {
                 System.out.println(tm.get(i) + "\tWins!");
@@ -83,6 +87,8 @@ public class Main {
                 RO32NUM.add(wl.get(i));
                 RO32SOS.add(SOS.get(i));
                 rank32.add(rank64.get(i));
+                offense32.add(offense.get(i));
+                deffense32.add(deffense.get(i));
           
 
 
@@ -93,6 +99,8 @@ public class Main {
                 RO32NUM.add(wl.get(i + 1));
                 RO32SOS.add(SOS.get(i + 1));
                 rank32.add(rank64.get(i+1));
+                offense32.add(offense.get(i+1));
+                deffense32.add(deffense.get(i+1));
 
             }
             if(ZTable.propp(Corrected1, Corrected2) > .45 && ZTable.propp(Corrected1, Corrected2) < .55)
@@ -110,7 +118,7 @@ public class Main {
 
         System.out.println("ROUND OF 32");
         for (int i = 0; i < RO32TM.size(); i = i + 2) {
-            double Corrected1 = RO32NUM.get(i) * RO32SOS.get(i), Corrected2 = RO32NUM.get(i + 1) * RO32SOS.get(i + 1);
+            double Corrected1 =(( RO32NUM.get(i) * RO32SOS.get(i)*offense.get(i))/deffense.get(i)), Corrected2 = RO32NUM.get(i + 1) * RO32SOS.get(i + 1);
             System.out.println(RO32TM.get(i) + "\t" + RO32TM.get(i + 1) + ":\t" + ZTable.propp(Corrected1, Corrected2));
 
             if (ZTable.propp(Corrected1, Corrected2) >= .5) {
@@ -119,6 +127,9 @@ public class Main {
                 RO16NUM.add(RO32NUM.get(i));
                 RO16SOS.add(RO32SOS.get(i));
                 rank16.add(rank32.get(i));
+                offense16.add(offense32.get(i));
+                deffense16.add(deffense32.get(i));
+
 
             } else {
                 System.out.println(RO32TM.get(i + 1) + "\tWins!");
@@ -126,6 +137,8 @@ public class Main {
                 RO16NUM.add(RO32NUM.get(i + 1));
                 RO16SOS.add(RO32SOS.get(i + 1));
                 rank16.add(rank32.get(i+1));
+                offense16.add(offense32.get(i+1));
+                deffense16.add(deffense32.get(i+1));
 
             }
             if(ZTable.propp(Corrected1, Corrected2) > .45 && ZTable.propp(Corrected1, Corrected2) < .55)
@@ -150,12 +163,17 @@ public class Main {
                 RO8NUM.add(RO16NUM.get(i));
                 RO8SOS.add(RO16SOS.get(i));
                 rank8.add(rank16.get(i));
+                offense8.add(offense16.get(i));
+                deffense8.add(deffense16.get(i));
+
             } else {
                 System.out.println(RO16TM.get(i + 1) + "\tWins!");
                 RO8TM.add(RO16TM.get(i + 1));
                 RO8NUM.add(RO16NUM.get(i + 1));
                 RO8SOS.add(RO16SOS.get(i + 1));
                 rank8.add(rank16.get(i+1));
+                offense8.add(offense16.get(i+1));
+                deffense8.add(deffense16.get(i+1));
 
             }
             if(ZTable.propp(Corrected1, Corrected2) > .45 && ZTable.propp(Corrected1, Corrected2) < .55)
@@ -181,6 +199,9 @@ public class Main {
                 RO4NUM.add(RO8NUM.get(i));
                 RO4SOS.add(RO8SOS.get(i));
                 rank4.add(rank8.get(i));
+                offense4.add(offense8.get(i));
+                deffense4.add(deffense4.get(i));
+
 
             } else {
                 System.out.println(RO8TM.get(i + 1) + "\tWins!");
@@ -188,6 +209,8 @@ public class Main {
                 RO4NUM.add(RO8NUM.get(i + 1));
                 RO4SOS.add(RO8SOS.get(i + 1));
                 rank4.add(rank8.get(i+1));
+                offense4.add(offense8.get(i+1));
+                deffense4.add(deffense4.get(i+1));
 
 
             }
@@ -213,6 +236,7 @@ public class Main {
                 FinalNUM.add(RO4NUM.get(i));
                 FinalSOS.add(RO4SOS.get(i));
                 rank2.add(rank4.get(i));
+                offense2.add(offense4.get(i));
 
             } else {
                 System.out.println(RO4TM.get(i + 1) + "\tWins!");
