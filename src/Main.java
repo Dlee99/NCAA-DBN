@@ -60,7 +60,7 @@ public class Main {
     public static bracketFrame frame;
 
     public static void main(String[] args) throws IOException {
-        Scanner test = new Scanner(new File("teams.txt"));
+        Scanner test = new Scanner(new File("2015"));
         //Scanner test = new Scanner(new File("2015"));
         System.out.println("ROUND OF 64");
         System.out.println();
@@ -74,7 +74,7 @@ public class Main {
             rank64.add(Integer.parseInt(s[3]));
             offense.add(Double.parseDouble(s[4]));
             deffense.add(Double.parseDouble(s[5]));
-            freeThrows.add(Double.parseDouble(s[6]));
+//            freeThrows.add(Double.parseDouble(s[6]));
 
 
         }
@@ -89,7 +89,7 @@ public class Main {
                 rank32.add(rank64.get(i));
                 offense32.add(offense.get(i));
                 deffense32.add(deffense.get(i));
-          
+
 
 
             } else {
@@ -118,7 +118,7 @@ public class Main {
 
         System.out.println("ROUND OF 32");
         for (int i = 0; i < RO32TM.size(); i = i + 2) {
-            double Corrected1 =(( RO32NUM.get(i) * RO32SOS.get(i)*offense.get(i))/deffense.get(i)), Corrected2 = RO32NUM.get(i + 1) * RO32SOS.get(i + 1);
+            double Corrected1 =(( RO32NUM.get(i) * RO32SOS.get(i)*offense32.get(i))/deffense32.get(i)), Corrected2 = (( RO32NUM.get(i+1) * RO32SOS.get(i+1)*offense32.get(i+1))/deffense32.get(i+1));
             System.out.println(RO32TM.get(i) + "\t" + RO32TM.get(i + 1) + ":\t" + ZTable.propp(Corrected1, Corrected2));
 
             if (ZTable.propp(Corrected1, Corrected2) >= .5) {
@@ -147,7 +147,7 @@ public class Main {
                 RO32Color.add(Color.ORANGE);
             else
                 RO32Color.add(Color.GREEN);
-           
+
             System.out.println();
 
         }
@@ -155,7 +155,7 @@ public class Main {
 
         System.out.println("ROUND OF 16 (Sweet 16)");
         for (int i = 0; i < RO16TM.size(); i = i + 2) {
-            double Corrected1 = RO16NUM.get(i) * RO16SOS.get(i), Corrected2 = RO16NUM.get(i + 1) * RO16SOS.get(i + 1);
+            double Corrected1 = ((RO16NUM.get(i) * RO16SOS.get(i)*offense16.get(i))/deffense16.get(i)), Corrected2 = ((RO16NUM.get(i+1) * RO16SOS.get(i+1)*offense16.get(i+1))/deffense16.get(i+1));
             System.out.println(RO16TM.get(i) + "\t" + RO16TM.get(i + 1) + ":\t" + ZTable.propp(Corrected1, Corrected2));
             if (ZTable.propp(Corrected1, Corrected2) >= .5) {
                 System.out.println(RO16TM.get(i) + "\tWins!");
@@ -190,7 +190,7 @@ public class Main {
 
         System.out.println("ROUND OF 8 (Elite 8)");
         for (int i = 0; i < RO8TM.size(); i = i + 2) {
-            double Corrected1 = RO8NUM.get(i) * RO8SOS.get(i), Corrected2 = RO8NUM.get(i + 1) * RO8SOS.get(i + 1);
+            double Corrected1 = ((RO8NUM.get(i) * RO8SOS.get(i)*offense8.get(i))/deffense8.get(i)), Corrected2 = ((RO8NUM.get(i+1) * RO8SOS.get(i+1)*offense8.get(i+1))/deffense8.get(i+1));
 
             System.out.println(RO8TM.get(i) + "\t" + RO8TM.get(i + 1) + ":\t" + ZTable.propp(Corrected1, Corrected2));
             if (ZTable.propp(Corrected1, Corrected2) >= .5) {
@@ -228,7 +228,7 @@ public class Main {
 
         System.out.println("ROUND OF 4 (Final 4)");
         for (int i = 0; i < RO4TM.size(); i = i + 2) {
-            double Corrected1 = RO4NUM.get(i) * RO4SOS.get(i), Corrected2 = RO4NUM.get(i + 1) * RO4SOS.get(i + 1);
+            double Corrected1 = ((RO4NUM.get(i) * RO4SOS.get(i)*offense4.get(i))/deffense4.get(i)), Corrected2 =((RO4NUM.get(i+1) * RO4SOS.get(i+1)*offense4.get(i+1))/deffense4.get(i+1));
             System.out.println(RO4TM.get(i) + "\t" + RO4TM.get(i + 1) + ":\t" + ZTable.propp(Corrected1, Corrected2));
             if (ZTable.propp(Corrected1, Corrected2) >= .5) {
                 System.out.println(RO4TM.get(i) + "\tWins!");
@@ -237,6 +237,7 @@ public class Main {
                 FinalSOS.add(RO4SOS.get(i));
                 rank2.add(rank4.get(i));
                 offense2.add(offense4.get(i));
+                deffense2.add(offense4.get(i));
 
             } else {
                 System.out.println(RO4TM.get(i + 1) + "\tWins!");
@@ -244,6 +245,10 @@ public class Main {
                 FinalNUM.add(RO4NUM.get(i + 1));
                 FinalSOS.add(RO4SOS.get(i + 1));
                 rank2.add(rank4.get(i+1));
+                rank2.add(rank4.get(i+1));
+                offense2.add(offense4.get(i+1));
+                deffense2.add(offense4.get(i+1));
+
 
 
             }
@@ -260,7 +265,7 @@ public class Main {
 
         System.out.println("Championship");
         for (int i = 0; i < FinalTM.size(); i = i + 2) {
-            double Corrected1 = FinalNUM.get(i) * FinalSOS.get(i), Corrected2 = FinalNUM.get(i + 1) * FinalSOS.get(i + 1);
+            double Corrected1 = ((FinalNUM.get(i) * FinalSOS.get(i)*offense2.get(i))/deffense2.get(i)), Corrected2 = ((FinalNUM.get(i+1) * FinalSOS.get(i+1)*offense2.get(i+1))/deffense2.get(i+1));
             System.out.println(FinalTM.get(i) + "\t" + FinalTM.get(i + 1) + ":\t" + ZTable.propp(Corrected1, Corrected2));
             if (ZTable.propp(Corrected1, Corrected2) >= .5) {
                 System.out.println(FinalTM.get(i) + "\tWins!");
@@ -283,7 +288,7 @@ public class Main {
         frame = new bracketFrame();
     }
     public static double right() throws FileNotFoundException {
-        Scanner right = new Scanner(new File("Right.txt"));
+        Scanner right = new Scanner(new File("2015Right"));
         double sum = 0;
         for (int i = 0; i < RO32TM.size(); i++) {
             if (right.nextLine().equals(RO32TM.get(i))) {
@@ -322,7 +327,7 @@ public class Main {
         }
         if (right.nextLine().equals(Winner))
             sum++;
-        return sum / 63.0;
+        return sum / 63.0*100;
     }
 }
 
