@@ -89,6 +89,7 @@ public class Main {
                 rank32.add(rank64.get(i));
                 offense32.add(offense.get(i));
                 deffense32.add(deffense.get(i));
+                freeThrows32.add(freeThrows.get(i));
 
 
 
@@ -101,6 +102,8 @@ public class Main {
                 rank32.add(rank64.get(i+1));
                 offense32.add(offense.get(i+1));
                 deffense32.add(deffense.get(i+1));
+                freeThrows32.add(freeThrows.get(i+1));
+
 
             }
             else{
@@ -152,6 +155,8 @@ public class Main {
                 rank16.add(rank32.get(i));
                 offense16.add(offense32.get(i));
                 deffense16.add(deffense32.get(i));
+                freeThrows16.add(freeThrows32.get(i));
+
 
 
 
@@ -163,6 +168,8 @@ public class Main {
                 rank16.add(rank32.get(i+1));
                 offense16.add(offense32.get(i+1));
                 deffense16.add(deffense32.get(i+1));
+                freeThrows16.add(freeThrows32.get(i+1));
+
 
 
             }
@@ -216,6 +223,8 @@ public class Main {
                 rank8.add(rank16.get(i));
                 offense8.add(offense16.get(i));
                 deffense8.add(deffense16.get(i));
+                freeThrows8.add(freeThrows16.get(i));
+
 
 
             } else if (ZTable.propp(Corrected1, Corrected2) <= .48){
@@ -226,6 +235,8 @@ public class Main {
                 rank8.add(rank16.get(i + 1));
                 offense8.add(offense16.get(i + 1));
                 deffense8.add(deffense16.get(i + 1));
+                freeThrows8.add(freeThrows16.get(i+1));
+
 
 
             }
@@ -281,6 +292,8 @@ public class Main {
                 rank4.add(rank8.get(i));
                 offense4.add(offense8.get(i));
                 deffense4.add(deffense8.get(i));
+                freeThrows4.add(freeThrows8.get(i));
+
 
 
             } else if (ZTable.propp(Corrected1, Corrected2) <= .48){
@@ -291,6 +304,8 @@ public class Main {
                 rank4.add(rank8.get(i + 1));
                 offense4.add(offense8.get(i + 1));
                 deffense4.add(deffense8.get(i + 1));
+                freeThrows4.add(freeThrows8.get(i+1));
+
 
             }
             else{
@@ -343,6 +358,8 @@ public class Main {
                 rank2.add(rank4.get(i));
                 offense2.add(offense4.get(i));
                 deffense2.add(deffense4.get(i));
+                freeThrows2.add(freeThrows4.get(i));
+
 
 
             } else if (ZTable.propp(Corrected1, Corrected2) <= .48){
@@ -353,6 +370,8 @@ public class Main {
                 rank2.add(rank4.get(i + 1));
                 offense2.add(offense4.get(i + 1));
                 deffense2.add(deffense4.get(i + 1));
+                freeThrows2.add(freeThrows4.get(i+1));
+
 
 
             }
