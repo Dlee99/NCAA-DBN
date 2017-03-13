@@ -200,7 +200,7 @@ public class Main {
                 RO4SOS.add(RO8SOS.get(i));
                 rank4.add(rank8.get(i));
                 offense4.add(offense8.get(i));
-                deffense4.add(deffense4.get(i));
+                deffense4.add(deffense8.get(i));
 
 
             } else {
@@ -210,7 +210,7 @@ public class Main {
                 RO4SOS.add(RO8SOS.get(i + 1));
                 rank4.add(rank8.get(i+1));
                 offense4.add(offense8.get(i+1));
-                deffense4.add(deffense4.get(i+1));
+                deffense4.add(deffense8.get(i+1));
 
 
             }
