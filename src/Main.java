@@ -60,7 +60,7 @@ public class Main {
     public static bracketFrame frame;
 
     public static void main(String[] args) throws IOException {
-        Scanner test = new Scanner(new File("2015"));
+        Scanner test = new Scanner(new File("2017TEAMS"));
         //Scanner test = new Scanner(new File("2015"));
         System.out.println("ROUND OF 64");
         System.out.println();
