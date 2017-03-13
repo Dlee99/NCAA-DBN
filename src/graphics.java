@@ -1,13 +1,11 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
+import java.awt.event.*;
 
 public class graphics extends JPanel  {
     JTextField FinalLeft = new JTextField(), FinalRight = new JTextField(), winner = new  JTextField();
     JButton button = new JButton();
+
     public void paintComponent(Graphics g) {
         if(FinalLeft.isVisible()){
             Main.frame.remove(FinalLeft);
@@ -329,10 +327,10 @@ public class graphics extends JPanel  {
 
 
         g.setFont(new Font("Times New Roman", Font.BOLD, 35));
-        g.drawString("South", width * 3 + 10, 120 + (space * 4) ) ;
+        g.drawString("East", width * 3 + 10, 120 + (space * 4) ) ;
         g.drawString("West", width * 3 + 10, 360 + (space * 12));
-        g.drawString("East", screen.width - 10 - (width * 4) + (width / 4) , 120 + (space * 4));
-        g.drawString("Midwest",screen.width - 10 - (width * 4) + (width / 4), 360 + (space * 12));
+        g.drawString("Midwest", screen.width - 10 - (width * 4) + (width / 4) , 120 + (space * 4));
+        g.drawString("South",screen.width - 10 - (width * 4) + (width / 4), 360 + (space * 12));
         g.drawString("BRACKET PREDICTOR", Main.frame.getWidth() / 2 - 205, Main.frame.getHeight() / 9);
         g.drawString("WINNER", mid + 20, 255 + 12 * space + 20);
         g.setFont(new Font("Times New Roman", Font.ITALIC, 35));
