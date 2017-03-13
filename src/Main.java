@@ -161,6 +161,26 @@ public class Main {
                 deffense16.add(deffense32.get(i+1));
 
             }
+            else{
+                if(freeThrows32.get(i) > freeThrows32.get(i + 1)){
+                    System.out.println(RO32TM.get(i) + "\tWins!");
+                    RO16TM.add(RO32TM.get(i));
+                    RO16NUM.add(RO32NUM.get(i));
+                    RO16SOS.add(RO32SOS.get(i));
+                    rank16.add(rank32.get(i));
+                    offense16.add(offense32.get(i));
+                    deffense16.add(deffense32.get(i));
+                }
+                else{
+                    System.out.println(RO32TM.get(i + 1) + "\tWins!");
+                    RO16TM.add(RO32TM.get(i + 1));
+                    RO16NUM.add(RO32NUM.get(i + 1));
+                    RO16SOS.add(RO32SOS.get(i + 1));
+                    rank16.add(rank32.get(i + 1));
+                    offense16.add(offense32.get(i + 1));
+                    deffense16.add(deffense32.get(i + 1));
+                }
+            }
             if(ZTable.propp(Corrected1, Corrected2) > .45 && ZTable.propp(Corrected1, Corrected2) < .55)
                 RO32Color.add(Color.RED);
             else if (ZTable.propp(Corrected1, Corrected2) > .25 && ZTable.propp(Corrected1, Corrected2) < .75)
@@ -186,15 +206,36 @@ public class Main {
                 offense8.add(offense16.get(i));
                 deffense8.add(deffense16.get(i));
 
-            } else {
+
+            } else if (ZTable.propp(Corrected1, Corrected2) <= .48){
                 System.out.println(RO16TM.get(i + 1) + "\tWins!");
                 RO8TM.add(RO16TM.get(i + 1));
                 RO8NUM.add(RO16NUM.get(i + 1));
                 RO8SOS.add(RO16SOS.get(i + 1));
-                rank8.add(rank16.get(i+1));
-                offense8.add(offense16.get(i+1));
-                deffense8.add(deffense16.get(i+1));
+                rank8.add(rank16.get(i + 1));
+                offense8.add(offense16.get(i + 1));
+                deffense8.add(deffense16.get(i + 1));
 
+            }
+            else{
+                if(freeThrows16.get(i) > freeThrows16.get(i + 1)){
+                    System.out.println(RO16TM.get(i) + "\tWins!");
+                    RO8TM.add(RO16TM.get(i));
+                    RO8NUM.add(RO16NUM.get(i));
+                    RO8SOS.add(RO16SOS.get(i));
+                    rank8.add(rank16.get(i));
+                    offense8.add(offense16.get(i));
+                    deffense8.add(deffense16.get(i));
+                }
+                else{
+                    System.out.println(RO16TM.get(i + 1) + "\tWins!");
+                    RO8TM.add(RO16TM.get(i + 1));
+                    RO8NUM.add(RO16NUM.get(i + 1));
+                    RO8SOS.add(RO16SOS.get(i + 1));
+                    rank8.add(rank16.get(i + 1));
+                    offense8.add(offense16.get(i + 1));
+                    deffense8.add(deffense16.get(i + 1));
+                }
             }
             if(ZTable.propp(Corrected1, Corrected2) > .45 && ZTable.propp(Corrected1, Corrected2) < .55)
                 RO16Color.add(Color.RED);
@@ -223,16 +264,35 @@ public class Main {
                 deffense4.add(deffense8.get(i));
 
 
-            } else {
+            } else if (ZTable.propp(Corrected1, Corrected2) <= .48){
                 System.out.println(RO8TM.get(i + 1) + "\tWins!");
                 RO4TM.add(RO8TM.get(i + 1));
                 RO4NUM.add(RO8NUM.get(i + 1));
                 RO4SOS.add(RO8SOS.get(i + 1));
-                rank4.add(rank8.get(i+1));
-                offense4.add(offense8.get(i+1));
-                deffense4.add(deffense8.get(i+1));
+                rank4.add(rank8.get(i + 1));
+                offense4.add(offense8.get(i + 1));
+                deffense4.add(deffense8.get(i + 1));
 
-
+            }
+            else{
+                if(freeThrows8.get(i) > freeThrows8.get(i + 1)){
+                    System.out.println(RO8TM.get(i) + "\tWins!");
+                    RO4TM.add(RO8TM.get(i));
+                    RO4NUM.add(RO8NUM.get(i));
+                    RO4SOS.add(RO8SOS.get(i));
+                    rank4.add(rank8.get(i));
+                    offense4.add(offense8.get(i));
+                    deffense4.add(deffense8.get(i));
+                }
+                else{
+                    System.out.println(RO8TM.get(i + 1) + "\tWins!");
+                    RO4TM.add(RO8TM.get(i + 1));
+                    RO4NUM.add(RO8NUM.get(i + 1));
+                    RO4SOS.add(RO8SOS.get(i + 1));
+                    rank4.add(rank8.get(i + 1));
+                    offense4.add(offense8.get(i + 1));
+                    deffense4.add(deffense8.get(i + 1));
+                }
             }
             if(ZTable.propp(Corrected1, Corrected2) > .45 && ZTable.propp(Corrected1, Corrected2) < .55)
                 RO8Color.add(Color.RED);
@@ -257,20 +317,39 @@ public class Main {
                 FinalSOS.add(RO4SOS.get(i));
                 rank2.add(rank4.get(i));
                 offense2.add(offense4.get(i));
-                deffense2.add(offense4.get(i));
+                deffense2.add(deffense4.get(i));
 
-            } else {
-                System.out.println(RO4TM.get(i + 1) + "\tWins!");
+
+            } else if (ZTable.propp(Corrected1, Corrected2) <= .48){
+                System.out.println(RO4TM.get(i) + "\tWins!");
                 FinalTM.add(RO4TM.get(i + 1));
                 FinalNUM.add(RO4NUM.get(i + 1));
                 FinalSOS.add(RO4SOS.get(i + 1));
-                rank2.add(rank4.get(i+1));
-                rank2.add(rank4.get(i+1));
-                offense2.add(offense4.get(i+1));
-                deffense2.add(offense4.get(i+1));
+                rank2.add(rank4.get(i + 1));
+                offense2.add(offense4.get(i + 1));
+                deffense2.add(deffense4.get(i + 1));
 
-
-
+            }
+            else{
+                if(freeThrows4.get(i) > freeThrows4.get(i + 1)){
+                    System.out.println(RO4TM.get(i) + "\tWins!");
+                    FinalTM.add(RO4TM.get(i));
+                    FinalNUM.add(RO4NUM.get(i));
+                    FinalSOS.add(RO4SOS.get(i));
+                    rank2.add(rank4.get(i));
+                    offense2.add(offense4.get(i));
+                    deffense2.add(deffense4.get(i));
+                }
+                else{
+                    System.out.println(RO8TM.get(i + 1) + "\tWins!");
+                    System.out.println(RO4TM.get(i) + "\tWins!");
+                    FinalTM.add(RO4TM.get(i + 1));
+                    FinalNUM.add(RO4NUM.get(i + 1));
+                    FinalSOS.add(RO4SOS.get(i + 1));
+                    rank2.add(rank4.get(i + 1));
+                    offense2.add(offense4.get(i + 1));
+                    deffense2.add(deffense4.get(i + 1));
+                }
             }
             if(ZTable.propp(Corrected1, Corrected2) > .45 && ZTable.propp(Corrected1, Corrected2) < .55)
                 RO4Color.add(Color.RED);
@@ -292,10 +371,22 @@ public class Main {
                 Winner = FinalTM.get(i);
                 rankWinner.add(rank64.get(i));
 
-            } else {
+            } else if (ZTable.propp(Corrected1, Corrected2) <= .48){
                 System.out.println(FinalTM.get(i + 1) + "\tWins!");
                 Winner = FinalTM.get(i);
                 rankWinner.add(rank64.get(i+1));
+            }
+            else{
+                if(freeThrows2.get(i) > freeThrows2.get(i + 1)){
+                    System.out.println(FinalTM.get(i) + "\tWins!");
+                    Winner = FinalTM.get(i);
+                    rankWinner.add(rank64.get(i));
+                }
+                else{
+                    System.out.println(FinalTM.get(i + 1) + "\tWins!");
+                    Winner = FinalTM.get(i);
+                    rankWinner.add(rank64.get(i+1));
+                }
             }
             if(ZTable.propp(Corrected1, Corrected2) > .45 && ZTable.propp(Corrected1, Corrected2) < .55)
                 FinalColor.add(Color.RED);
