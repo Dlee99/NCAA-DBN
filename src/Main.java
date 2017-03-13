@@ -44,6 +44,12 @@ public class Main {
     public static ArrayList<Double> freeThrows8 = new ArrayList<>();
     public static ArrayList<Double> freeThrows4 = new ArrayList<>();
     public static ArrayList<Double> freeThrows2 = new ArrayList<>();
+    public static ArrayList<Double> RO64C = new ArrayList<>();
+    public static ArrayList<Double> RO32C = new ArrayList<>();
+    public static ArrayList<Double> RO16C = new ArrayList<>();
+    public static ArrayList<Double> RO8C = new ArrayList<>();
+    public static ArrayList<Double> RO4C = new ArrayList<>();
+    public static ArrayList<Double> FinalC = new ArrayList<>();
     public static double wls = 3;
     public static double soss = 1.5;
     public static String Winner;
@@ -64,7 +70,8 @@ public class Main {
             rank64.add(Integer.parseInt(s[3]));
             offense.add(Double.parseDouble(s[4]));
             deffense.add(Double.parseDouble(s[5]));
-
+            freeThrows.add(Double.parseDouble(s[6]));
+            RO64C.add(Double.parseDouble(s[1]) * Double.parseDouble(s[2]) * Double.parseDouble(s[4]) / Double.parseDouble(s[5]));
 
         }
         for (int i = 0; i < tm.size(); i = i + 2) {
