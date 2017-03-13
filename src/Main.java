@@ -38,13 +38,19 @@ public class Main {
     public static ArrayList<Color> FinalColor = new ArrayList<>();
     public static ArrayList<Double> offense = new ArrayList<>();
     public static ArrayList<Double> deffense = new ArrayList<>();
+    public static ArrayList<Double> freeThrows = new ArrayList<>();
+    public static ArrayList<Double> freeThrows32 = new ArrayList<>();
+    public static ArrayList<Double> freeThrows16 = new ArrayList<>();
+    public static ArrayList<Double> freeThrows8 = new ArrayList<>();
+    public static ArrayList<Double> freeThrows4 = new ArrayList<>();
+    public static ArrayList<Double> freeThrows2 = new ArrayList<>();
     public static double wls = 3;
     public static double soss = 1.5;
     public static String Winner;
     public static bracketFrame frame;
 
     public static void main(String[] args) throws IOException {
-        Scanner test = new Scanner(new File("2015"));
+        Scanner test = new Scanner(new File("teams.txt"));
         //Scanner test = new Scanner(new File("2015"));
         System.out.println("ROUND OF 64");
         System.out.println();
@@ -246,7 +252,7 @@ public class Main {
         frame = new bracketFrame();
     }
     public static double right() throws FileNotFoundException {
-        Scanner right = new Scanner(new File("2015right"));
+        Scanner right = new Scanner(new File("Right.txt"));
         double sum = 0;
         for (int i = 0; i < RO32TM.size(); i++) {
             if (right.nextLine().equals(RO32TM.get(i))) {
