@@ -60,7 +60,7 @@ public class Main {
     public static bracketFrame frame;
 
     public static void main(String[] args) throws IOException {
-        Scanner test = new Scanner(new File("teams.txt"));
+        Scanner test = new Scanner(new File("2015"));
         //Scanner test = new Scanner(new File("2015"));
         System.out.println("ROUND OF 64");
         System.out.println();
@@ -448,7 +448,7 @@ public class Main {
         frame = new bracketFrame();
     }
     public static double right() throws FileNotFoundException {
-        Scanner right = new Scanner(new File("Right.txt"));
+        Scanner right = new Scanner(new File("2015right"));
         double sum = 0;
         for (int i = 0; i < RO32TM.size(); i++) {
             if (right.nextLine().equals(RO32TM.get(i))) {
