@@ -54,13 +54,11 @@ public class Main {
     public static ArrayList<Double> freeThrows8 = new ArrayList<>();
     public static ArrayList<Double> freeThrows4 = new ArrayList<>();
     public static ArrayList<Double> freeThrows2 = new ArrayList<>();
-    public static double wls = 3;
-    public static double soss = 1.5;
     public static String Winner;
     public static bracketFrame frame;
 
     public static void main(String[] args) throws IOException {
-        Scanner test = new Scanner(new File("2015"));
+        Scanner test = new Scanner(new File("2017TEAMS"));
         //Scanner test = new Scanner(new File("2015"));
         System.out.println("ROUND OF 64");
         System.out.println();
