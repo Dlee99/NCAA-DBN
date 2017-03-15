@@ -350,8 +350,8 @@ public class graphics extends JPanel  {
             public void mousePressed(MouseEvent e) {
                 if(e.getButton() == MouseEvent.BUTTON1) {
                     JFrame newf = new JFrame("Color Key:");
-                    newf.setSize(500,200);
-                    newf.setLocationRelativeTo(null);
+                    newf.setSize(300,200);
+                    newf.setLocation(810,155);
                     newf.setVisible(true);
                     JLabel label = new JLabel();
 
